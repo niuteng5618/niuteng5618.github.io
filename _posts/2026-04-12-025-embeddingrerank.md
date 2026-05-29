@@ -2,7 +2,19 @@
 layout: post
 title: "embedding和rerank区别"
 date: 2026-04-12
-tags: ["人工智能技术", "大模型基础", "向量模型", "embedding和rerank区别"]
+primary_category: "人工智能技术"
+secondary_category: "RAG系统"
+series: "检索排序"
+categories:
+  - 人工智能技术
+  - RAG系统
+  - 检索排序
+tags:
+  - 检索排序
+  - Embedding
+  - Rerank
+  - 召回
+  - 重排序
 toc: true
 comments: false
 author: niuteng5618

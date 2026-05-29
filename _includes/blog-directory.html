@@ -1,0 +1,44 @@
+<section class="blog-directory">
+  <h2>博客目录</h2>
+  {% assign primary_groups = site.posts | group_by: "primary_category" | sort: "name" %}
+  {% for primary in primary_groups %}
+    {% assign primary_name = primary.name | default: "未分类" %}
+    <details class="directory-primary" open>
+      <summary>
+        <span>{{ primary_name }}</span>
+        <span class="directory-count">{{ primary.items | size }}</span>
+      </summary>
+
+      {% assign secondary_groups = primary.items | group_by: "secondary_category" | sort: "name" %}
+      {% for secondary in secondary_groups %}
+        {% assign secondary_name = secondary.name | default: "未分类" %}
+        <details class="directory-secondary" open>
+          <summary>
+            <span>{{ secondary_name }}</span>
+            <span class="directory-count">{{ secondary.items | size }}</span>
+          </summary>
+
+          {% assign series_groups = secondary.items | group_by: "series" | sort: "name" %}
+          {% for series_group in series_groups %}
+            {% assign series_name = series_group.name | default: "其他" %}
+            <details class="directory-series">
+              <summary>
+                <span>{{ series_name }}</span>
+                <span class="directory-count">{{ series_group.items | size }}</span>
+              </summary>
+
+              <ul>
+                {% for post in series_group.items %}
+                  <li class="{% if page.url == post.url %}active{% endif %}">
+                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                    <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+                  </li>
+                {% endfor %}
+              </ul>
+            </details>
+          {% endfor %}
+        </details>
+      {% endfor %}
+    </details>
+  {% endfor %}
+</section>

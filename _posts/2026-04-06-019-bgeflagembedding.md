@@ -2,7 +2,18 @@
 layout: post
 title: "BGE的FlagEmbedding库——使用嵌入模型提取稀疏向量"
 date: 2026-04-06
-tags: ["人工智能技术", "大模型基础", "Embedding模型", "BGE的FlagEmbedding库——使用嵌入模型提取稀疏向量"]
+primary_category: "人工智能技术"
+secondary_category: "大模型基础"
+series: "Embedding"
+categories:
+  - 人工智能技术
+  - 大模型基础
+  - Embedding
+tags:
+  - Embedding
+  - BGE
+  - FlagEmbedding
+  - 稀疏向量
 toc: true
 comments: false
 author: niuteng5618

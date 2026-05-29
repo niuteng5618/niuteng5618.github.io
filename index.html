@@ -21,18 +21,18 @@ layout: default
 <script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
 
 <script>
-	window.simpleJekyllSearch = new SimpleJekyllSearch({
-	searchInput: document.getElementById('search-input'),
-	resultsContainer: document.getElementById('results-container'),
-	json: '{{ site.baseurl }}/search.json',
-	searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-	noResultsText: 'No results found',
-	limit: 10,
-	fuzzy: false,
-	exclude: ['Welcome']
+  window.simpleJekyllSearch = new SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('results-container'),
+    json: '{{ site.baseurl }}/search.json',
+    searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
+    noResultsText: 'No results found',
+    limit: 10,
+    fuzzy: false,
+    exclude: ['Welcome']
   })
 </script>
- 
+
 {% if site.posts.size == 0 %}
   <h2>No post found</h2>
 {% endif %}
@@ -45,11 +45,20 @@ layout: default
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </h1>
 
-      <div class="meta">
-        <span class="date">
-          {{ post.date | date: "%Y-%m-%d" }}
-        </span>
+      <div class="post-card-meta">
+        <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        {% if post.primary_category or post.secondary_category or post.series %}
+          <span class="category-path">
+            {% if post.primary_category %}<span>{{ post.primary_category }}</span>{% endif %}
+            {% if post.secondary_category %}<span>/</span><span>{{ post.secondary_category }}</span>{% endif %}
+            {% if post.series %}<span>/</span><span>{{ post.series }}</span>{% endif %}
+          </span>
+        {% endif %}
+      </div>
 
+      {% if post.tags %}
+      <div class="post-card-tags">
+        <span class="meta-label">标签</span>
         <ul class="tag">
           {% for tag in post.tags %}
           <li>
@@ -60,6 +69,7 @@ layout: default
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
 
       <div class="entry">
         {{ post.excerpt | truncate: 200 }}

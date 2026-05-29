@@ -9,7 +9,9 @@ navigation:
     url: /
   - name: 关于
     url: /about
-  - name: 分类
+  - name: 目录
+    url: /categories
+  - name: 标签
     url: /tags
 
 paginate: 8

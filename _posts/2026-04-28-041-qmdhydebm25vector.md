@@ -2,7 +2,18 @@
 layout: post
 title: "qmd——融合hyde、bm25、Vector的文档检索方法"
 date: 2026-04-28
-tags: ["人工智能技术", "大模型基础", "RAG系统", "qmd——融合hyde、bm25、Vector的文档检索方法"]
+primary_category: "人工智能技术"
+secondary_category: "RAG系统"
+series: "混合检索"
+categories:
+  - 人工智能技术
+  - RAG系统
+  - 混合检索
+tags:
+  - 混合检索
+  - HyDE
+  - BM25
+  - 向量检索
 toc: true
 comments: false
 author: niuteng5618

@@ -2,7 +2,19 @@
 layout: post
 title: "Codex上下文压缩-compact"
 date: 2026-05-16
-tags: ["人工智能技术", "智能体应用开发", "codex_cc-使用"]
+primary_category: "人工智能技术"
+secondary_category: "智能体应用开发"
+series: "Claude Code / Codex"
+categories:
+  - 人工智能技术
+  - 智能体应用开发
+  - Claude Code / Codex
+tags:
+  - Claude Code / Codex
+  - Codex
+  - 上下文压缩
+  - Compact
+  - 开发工具
 toc: true
 comments: false
 author: niuteng5618

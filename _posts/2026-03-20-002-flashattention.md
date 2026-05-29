@@ -2,7 +2,19 @@
 layout: post
 title: "FlashAttention"
 date: 2026-03-20
-tags: ["Transformer架构知识点", "FlashAttention"]
+primary_category: "人工智能技术"
+secondary_category: "大模型基础"
+series: "Attention"
+categories:
+  - 人工智能技术
+  - 大模型基础
+  - Attention
+tags:
+  - Attention
+  - Flash Attention
+  - Tiling
+  - SRAM
+  - HBM
 toc: true
 comments: false
 author: niuteng5618

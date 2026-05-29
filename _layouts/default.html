@@ -4,13 +4,18 @@
   <body>
     {% include nav.html %}
 
-    {% if page.toc==true %}
-      <aside class="toc">
-        {% include toc.html html=content %}
-      </aside>
-    {% endif %}
+    <aside class="right-rail">
+      {% include blog-directory.html %}
 
-    <div id="main" role="main" class="wrapper-content">
+      {% if page.toc==true %}
+        <section class="post-toc">
+          <h2>本文目录</h2>
+          {% include toc.html html=content %}
+        </section>
+      {% endif %}
+    </aside>
+
+    <div id="main" role="main" class="wrapper-content with-right-rail">
       <div class="container">
         {{ content }}
       </div>
@@ -18,12 +23,6 @@
 
     {% include analytics.html %}
   </body>
-
-  {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
-  {% endif %}
 
   <div class="wrapper-footer-mobile">
     <footer class="footer">

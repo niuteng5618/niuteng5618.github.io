@@ -951,3 +951,212 @@ body.dark-mode {
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
+// Right-side blog directory and post metadata
+.right-rail {
+  width: 330px;
+  height: 100%;
+  overflow-y: auto;
+  right: 0;
+  top: 0;
+  position: fixed;
+  z-index: 3;
+  padding: 20px 18px;
+  box-sizing: border-box;
+  background-color: $background-color;
+  border-left: 1px solid $divider-color;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.blog-directory,
+.post-toc {
+  margin-bottom: 28px;
+  font-size: 13px;
+  line-height: 1.45em;
+
+  h2 {
+    margin: 0 0 12px;
+    padding-bottom: 10px;
+    border-bottom: 3px double $divider-color;
+    font-size: 18px;
+    line-height: 1.4em;
+  }
+
+  details {
+    margin: 6px 0 6px 10px;
+  }
+
+  summary {
+    cursor: pointer;
+    color: $base-color;
+    font-weight: 600;
+    list-style-position: outside;
+  }
+
+  ul {
+    margin: 6px 0 10px 10px;
+    padding: 0;
+  }
+
+  li {
+    margin: 7px 0;
+    padding-left: 0;
+  }
+
+  li:before {
+    content: "";
+  }
+
+  a {
+    color: $base-color;
+  }
+
+  time {
+    display: block;
+    color: $base-lighten-color;
+    font-size: 11px;
+    line-height: 1.3em;
+  }
+}
+
+.directory-count {
+  color: $base-lighten-color;
+  font-size: 11px;
+  font-weight: 300;
+  margin-left: 4px;
+}
+
+.directory-series li.active > a {
+  color: $link-color;
+  font-weight: 700;
+}
+
+.post-toc {
+  border-top: 1px solid $divider-color;
+  padding-top: 20px;
+}
+
+.categories-page .blog-directory {
+  font-size: 15px;
+
+  details {
+    margin-left: 0;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .with-right-rail {
+    padding-right: 360px;
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 1399px) {
+  .right-rail {
+    display: none;
+  }
+}
+
+.post-detail {
+  .tag {
+    display: inline;
+    font-weight: 300;
+    font-size: $small-font-size;
+
+    li:before {
+      content: '';
+    }
+
+    li {
+      display: inline;
+      margin: 0;
+
+      > a {
+        margin: 3px 3px 3px 0;
+        padding: .5px 4px;
+        color: $base-color;
+        background-color: $tag-index-label-background-color;
+        border-radius: 3px;
+
+        &:hover {
+          color: $link-color;
+          background-color:$link-bghv-color;
+        }
+      }
+    }
+  }
+}
+
+.post-header {
+  margin: 28px 0 30px;
+  padding: 20px;
+  border: 1px solid $divider-color;
+  border-radius: 6px;
+  background-color: rgba(227, 231, 236, 0.12);
+}
+
+.post-title {
+  margin: 8px 0 16px;
+  line-height: 1.35em;
+}
+
+.post-file {
+  margin: 0;
+  color: $base-lighten-color;
+
+  code {
+    padding: 2px 6px;
+    border-radius: 3px;
+    background-color: $tag-index-label-background-color;
+    color: $base-color;
+    font-size: 12px;
+  }
+}
+
+.post-meta {
+  border-top: 1px solid $divider-color;
+  padding-top: 12px;
+}
+
+.post-meta-row,
+.post-card-meta,
+.post-card-tags {
+  margin: 7px 0;
+}
+
+.meta-label {
+  display: inline-block;
+  min-width: 44px;
+  margin-right: 8px;
+  color: $base-lighten-color;
+  font-size: $small-font-size;
+  font-weight: 700;
+}
+
+.category-path {
+  color: $base-lighten-color;
+  font-size: $small-font-size;
+
+  span {
+    margin-right: 4px;
+  }
+}
+
+.post-body {
+  margin-top: 24px;
+  padding-top: 12px;
+  border-top: 1px solid $divider-color;
+}
+
+.content-heading {
+  color: $base-lighten-color;
+  font-size: 18px;
+  line-height: 1.4em;
+  margin-top: 0;
+}
+
+.post-card-meta {
+  color: $base-lighten-color;
+}

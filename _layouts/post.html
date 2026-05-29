@@ -2,32 +2,55 @@
 layout: default
 ---
 
-<article class="posts">
-  
-  <h1>{{ page.title }}</h1>
+<article class="post-detail">
+  <header class="post-header">
+    <div class="post-file">
+      <span class="meta-label">文件名</span>
+      <code>{{ page.path | split: "/" | last }}</code>
+    </div>
 
-  <div clsss="meta">
-    <span class="date">
-      {{ page.date | date: "%Y-%m-%d" }}
-    </span>
+    <h1 class="post-title">{{ page.title }}</h1>
 
-    <ul class="tag">
-      {% for tag in page.tags %}
-      <li>
-        <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-          {{ tag }}
-        </a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+    <div class="post-meta">
+      <div class="post-meta-row">
+        <span class="meta-label">日期</span>
+        <time class="date">{{ page.date | date: "%Y-%m-%d" }}</time>
+      </div>
 
-  
+      {% if page.primary_category or page.secondary_category or page.series %}
+      <div class="post-meta-row post-categories">
+        <span class="meta-label">分类</span>
+        <span class="category-path">
+          {% if page.primary_category %}<span>{{ page.primary_category }}</span>{% endif %}
+          {% if page.secondary_category %}<span>/</span><span>{{ page.secondary_category }}</span>{% endif %}
+          {% if page.series %}<span>/</span><span>{{ page.series }}</span>{% endif %}
+        </span>
+      </div>
+      {% endif %}
 
-  <div class="entry">
-    {{ content }}
-  </div>
+      {% if page.tags %}
+      <div class="post-meta-row post-tags">
+        <span class="meta-label">标签</span>
+        <ul class="tag">
+          {% for tag in page.tags %}
+          <li>
+            <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
+              {{ tag }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+    </div>
+  </header>
 
+  <section class="post-body">
+    <h2 class="content-heading">正文</h2>
+    <div class="entry">
+      {{ content }}
+    </div>
+  </section>
 </article>
 
 <div class="pagination">

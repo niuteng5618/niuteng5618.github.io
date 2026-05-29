@@ -2,7 +2,18 @@
 layout: post
 title: "KVcache（3）——包含KVcache完整请求示例"
 date: 2026-04-17
-tags: ["人工智能技术", "大模型基础", "KVcache"]
+primary_category: "人工智能技术"
+secondary_category: "大模型推理"
+series: "KV Cache"
+categories:
+  - 人工智能技术
+  - 大模型推理
+  - KV Cache
+tags:
+  - KV Cache
+  - 请求示例
+  - 推理流程
+  - 缓存
 toc: true
 comments: false
 author: niuteng5618

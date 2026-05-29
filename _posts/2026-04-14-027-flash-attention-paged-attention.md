@@ -2,7 +2,19 @@
 layout: post
 title: "Flash Attention & Paged Attention"
 date: 2026-04-14
-tags: ["人工智能技术", "大模型基础", "FlashAttention&PageAttention"]
+primary_category: "人工智能技术"
+secondary_category: "大模型基础"
+series: "Attention"
+categories:
+  - 人工智能技术
+  - 大模型基础
+  - Attention
+tags:
+  - Attention
+  - Flash Attention
+  - Paged Attention
+  - KV Cache
+  - 推理优化
 toc: true
 comments: false
 author: niuteng5618
