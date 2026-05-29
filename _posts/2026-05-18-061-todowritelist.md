@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "TodoWriteList"
+display_title: "TodoWriteList"
+display_filename: "TodoWriteList.md"
 date: 2026-05-18
 primary_category: "人工智能技术"
 secondary_category: "智能体应用开发"
 series: "Claude Code / Codex"
+primary_category_order: 1
+secondary_category_order: 8
+series_order: 4
+post_order: 61
 categories:
   - 人工智能技术
   - 智能体应用开发

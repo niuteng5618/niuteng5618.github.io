@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "embedding和rerank区别"
+display_title: "embedding和rerank区别"
+display_filename: "embedding和rerank区别.md"
 date: 2026-04-12
 primary_category: "人工智能技术"
 secondary_category: "RAG系统"
 series: "检索排序"
+primary_category_order: 1
+secondary_category_order: 6
+series_order: 4
+post_order: 25
 categories:
   - 人工智能技术
   - RAG系统

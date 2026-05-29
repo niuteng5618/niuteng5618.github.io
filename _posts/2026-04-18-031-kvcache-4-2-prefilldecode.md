@@ -1,10 +1,16 @@
 ---
 layout: post
 title: "KVcache（4）——模型推理的2个阶段：Prefill、decode"
+display_title: "KVcache（4）——模型推理的2个阶段：Prefill、decode"
+display_filename: "KVcache（4）——模型推理的2个阶段：Prefill、decode.md"
 date: 2026-04-18
 primary_category: "人工智能技术"
 secondary_category: "大模型推理"
 series: "KV Cache"
+primary_category_order: 1
+secondary_category_order: 5
+series_order: 4
+post_order: 31
 categories:
   - 人工智能技术
   - 大模型推理

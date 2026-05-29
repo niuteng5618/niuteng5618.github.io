@@ -8,6 +8,57 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 POSTS_DIR = ROOT / "_posts"
 
+
+PRIMARY_ORDER = {
+    "人工智能技术": 1,
+    "计算机基础": 2,
+    "博客建设": 3,
+    "未分类": 99,
+}
+
+SECONDARY_ORDER = {
+    "人工智能技术": {
+        "学习路线": 1,
+        "大模型基础": 2,
+        "深度学习基础": 3,
+        "训练基础设施": 4,
+        "大模型推理": 5,
+        "RAG系统": 6,
+        "强化学习": 7,
+        "智能体应用开发": 8,
+        "算法与面试": 9,
+        "多模态模型": 10,
+    },
+    "计算机基础": {
+        "Linux": 1,
+        "数据库": 2,
+        "计算机网络": 3,
+    },
+    "博客建设": {
+        "GitHub Pages": 1,
+    },
+    "未分类": {
+        "待整理": 99,
+    },
+}
+
+SERIES_ORDER = {
+    ("人工智能技术", "学习路线"): {"LLM 知识库": 1, "大语言模型速成": 2},
+    ("人工智能技术", "大模型基础"): {"Transformer 架构": 1, "Attention": 2, "LLaMA": 3, "预训练": 4, "MoE": 5, "Embedding": 6, "参数高效微调": 7, "量化": 8},
+    ("人工智能技术", "深度学习基础"): {"训练基础": 1, "模型训练流程": 2, "激活函数": 3, "正则化": 4, "知识蒸馏": 5, "序列模型": 6, "PyTorch": 7, "xLSTM": 8},
+    ("人工智能技术", "训练基础设施"): {"GPU 通信": 1, "并行策略": 2},
+    ("人工智能技术", "大模型推理"): {"确定性推理": 1, "不确定性": 2, "解码策略": 3, "KV Cache": 4, "推理压测": 5, "显存估算": 6},
+    ("人工智能技术", "RAG系统"): {"基础概念": 1, "系统流程": 2, "Query 改写": 3, "检索排序": 4, "混合检索": 5, "GraphRAG": 6, "LangChain": 7, "LightRAG": 8, "Prompt": 9, "评测": 10, "先进方法": 11},
+    ("人工智能技术", "强化学习"): {"偏好优化": 1, "策略优化": 2, "价值学习": 3},
+    ("人工智能技术", "智能体应用开发"): {"Skill": 1, "MCP": 2, "MetaGPT": 3, "Claude Code / Codex": 4},
+    ("人工智能技术", "算法与面试"): {"算法面试": 1},
+    ("人工智能技术", "多模态模型"): {"输出异常分析": 1},
+    ("计算机基础", "Linux"): {"文件管理": 1, "磁盘管理": 2},
+    ("计算机基础", "数据库"): {"MySQL": 1},
+    ("计算机基础", "计算机网络"): {"面试基础": 1, "网络协议": 2},
+    ("博客建设", "GitHub Pages"): {"站点维护": 1},
+}
+
 ALIASES = OrderedDict([
     ("KV Cache", ["kvcache", "kv cache", "kv缓存", "prefill", "decode", "pd分离", "缓存命中"]),
     ("Attention", ["attention", "注意力", "mha", "mqa", "gqa", "mla", "multi-head", "多头", "交叉注意力", "线性注意力"]),
@@ -209,9 +260,33 @@ def detect_from_content(title: str, body: str):
         return "人工智能技术", "大模型基础", found[0], found[:6]
     return "未分类", "待整理", "其他", ["待整理"]
 
-def front_matter(data, taxonomy):
+
+def clean_display_title(title: str) -> str:
+    cleaned = re.sub(r"^\s*\d+(?:[-_.、]\d+)*\s*[-_.、]?\s*", "", str(title)).strip()
+    return cleaned or str(title)
+
+def clean_display_filename(title: str, filename: str) -> str:
+    display = clean_display_title(title)
+    display = re.sub(r"[\\/:*?\"<>|]", "-", display).strip(" .-")
+    if not display:
+        display = re.sub(r"^\d{4}-\d{2}-\d{2}-\d{3}-", "", filename).removesuffix(".md")
+        display = re.sub(r"^\d+(?:[-_.]\d+)*[-_.]?", "", display).strip("-_.") or "post"
+    return f"{display}.md"
+
+def order_values(primary: str, secondary: str, series: str):
+    primary_order = PRIMARY_ORDER.get(primary, 99)
+    secondary_order = SECONDARY_ORDER.get(primary, {}).get(secondary, 99)
+    series_order = SERIES_ORDER.get((primary, secondary), {}).get(series, 99)
+    return primary_order, secondary_order, series_order
+
+def post_order_from_filename(filename: str) -> int:
+    match = re.match(r"^\d{4}-\d{2}-\d{2}-(\d{3})-", filename)
+    return int(match.group(1)) if match else 999
+
+def front_matter(data, taxonomy, filename: str):
     primary, secondary, series, tags = taxonomy
-    # de-duplicate tags, remove hierarchy duplicates and noisy full titles.
+    primary_order, secondary_order, series_order = order_values(primary, secondary, series)
+    post_order = post_order_from_filename(filename)
     cleaned = []
     for tag in tags:
         tag = str(tag).strip()
@@ -227,10 +302,16 @@ def front_matter(data, taxonomy):
         "---",
         "layout: post",
         f"title: {yaml_scalar(data.get('title', 'Untitled'))}",
+        f"display_title: {yaml_scalar(clean_display_title(data.get('title', 'Untitled')))}",
+        f"display_filename: {yaml_scalar(clean_display_filename(data.get('title', 'Untitled'), filename))}",
         f"date: {data.get('date', '')}",
         f"primary_category: {yaml_scalar(primary)}",
         f"secondary_category: {yaml_scalar(secondary)}",
         f"series: {yaml_scalar(series)}",
+        f"primary_category_order: {primary_order}",
+        f"secondary_category_order: {secondary_order}",
+        f"series_order: {series_order}",
+        f"post_order: {post_order}",
         "categories:",
         yaml_list(categories),
         "tags:",
@@ -250,12 +331,12 @@ def main():
         fm, body = split_front_matter(text)
         data = parse_simple_front_matter(fm)
         taxonomy = EXACT.get(post.name) or detect_from_content(data.get("title", post.stem), body)
-        new_text = front_matter(data, taxonomy) + body.lstrip("\n")
+        new_text = front_matter(data, taxonomy, post.name) + body.lstrip("\n")
         post.write_text(new_text, encoding="utf-8")
-        report.append((post.name, taxonomy))
+        report.append((post.name, clean_display_title(data.get("title", post.stem)), clean_display_filename(data.get("title", post.stem), post.name), taxonomy, order_values(*taxonomy[:3])))
     print(f"updated={len(report)}")
-    for name, taxonomy in report:
-        print(f"{name}: {' / '.join(taxonomy[:3])} | {', '.join(taxonomy[3])}")
+    for name, display_title, display_filename, taxonomy, orders in report:
+        print(f"{orders[0]}.{orders[1]}.{orders[2]} {name} -> {display_title} ({display_filename})")
 
 if __name__ == "__main__":
     main()

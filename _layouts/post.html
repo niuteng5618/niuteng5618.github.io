@@ -6,10 +6,10 @@ layout: default
   <header class="post-header">
     <div class="post-file">
       <span class="meta-label">文件名</span>
-      <code>{{ page.path | split: "/" | last }}</code>
+      <code>{{ page.display_filename | default: page.path | split: "/" | last }}</code>
     </div>
 
-    <h1 class="post-title">{{ page.title }}</h1>
+    <h1 class="post-title">{{ page.display_title | default: page.title }}</h1>
 
     <div class="post-meta">
       <div class="post-meta-row">
@@ -21,9 +21,9 @@ layout: default
       <div class="post-meta-row post-categories">
         <span class="meta-label">分类</span>
         <span class="category-path">
-          {% if page.primary_category %}<span>{{ page.primary_category }}</span>{% endif %}
-          {% if page.secondary_category %}<span>/</span><span>{{ page.secondary_category }}</span>{% endif %}
-          {% if page.series %}<span>/</span><span>{{ page.series }}</span>{% endif %}
+          {% if page.primary_category %}<span>{{ page.primary_category_order }}. {{ page.primary_category }}</span>{% endif %}
+          {% if page.secondary_category %}<span>/</span><span>{{ page.primary_category_order }}.{{ page.secondary_category_order }} {{ page.secondary_category }}</span>{% endif %}
+          {% if page.series %}<span>/</span><span>{{ page.primary_category_order }}.{{ page.secondary_category_order }}.{{ page.series_order }} {{ page.series }}</span>{% endif %}
         </span>
       </div>
       {% endif %}
