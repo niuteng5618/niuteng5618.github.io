@@ -1,4 +1,4 @@
-<details class="blog-directory-shell" {% unless page.url == '/tags/' %}open{% endunless %}>
+<details class="blog-directory-shell" {% unless page.url == '/tags/' or page.url == '/categories/' %}open{% endunless %}>
   <summary class="blog-directory-toggle">
     <span>博客目录</span>
     <span class="toggle-hint">展开/收起</span>
@@ -10,7 +10,7 @@
       {% assign primary_name = primary.name | default: "未分类" %}
       {% assign primary_first = primary.items | first %}
       {% assign primary_order = primary_first.primary_category_order | default: forloop.index %}
-      <details class="directory-primary" open>
+      <details class="directory-primary" {% unless page.url == '/categories/' %}open{% endunless %}>
         <summary>
           <span class="directory-label">
             <span class="directory-order">{{ primary_order }}.</span>
@@ -24,7 +24,7 @@
           {% assign secondary_name = secondary.name | default: "未分类" %}
           {% assign secondary_first = secondary.items | first %}
           {% assign secondary_order = secondary_first.secondary_category_order | default: forloop.index %}
-          <details class="directory-secondary" open>
+          <details class="directory-secondary" {% unless page.url == '/categories/' %}open{% endunless %}>
             <summary>
               <span class="directory-label">
                 <span class="directory-order">{{ primary_order }}.{{ secondary_order }}</span>

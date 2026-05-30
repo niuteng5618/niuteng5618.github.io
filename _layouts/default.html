@@ -5,7 +5,8 @@
     <div class="site-bg-decoration" aria-hidden="true"></div>
     {% include nav.html %}
 
-    <aside class="right-rail">
+    <aside class="right-rail" id="rightRail">
+      <button class="rail-collapse-button" id="railCollapseButton" type="button" aria-label="收起博客目录">⇥</button>
       {% include blog-directory.html %}
 
       {% if page.toc==true %}
@@ -32,6 +33,7 @@
   </div>
   {% include theme-toggle.html %}
   {% include back-to-top.html %}
+  {% include image-lightbox.html %}
   <script src="{{ site.baseurl }}/js/site-interactions.js"></script>
 
 </html>
