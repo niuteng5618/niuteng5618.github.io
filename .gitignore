@@ -1,3 +1,9 @@
 # jekyll local file
 .jekyll*
 _site
+
+# claude code tooling
+.claude/
+
+# downloaded source archive
+niuteng5618.github.io-main.zip

@@ -12,7 +12,6 @@ POSTS_DIR = ROOT / "_posts"
 PRIMARY_ORDER = {
     "人工智能技术": 1,
     "计算机基础": 2,
-    "博客建设": 3,
     "未分类": 99,
 }
 
@@ -34,9 +33,6 @@ SECONDARY_ORDER = {
         "数据库": 2,
         "计算机网络": 3,
     },
-    "博客建设": {
-        "GitHub Pages": 1,
-    },
     "未分类": {
         "待整理": 99,
     },
@@ -56,7 +52,6 @@ SERIES_ORDER = {
     ("计算机基础", "Linux"): {"文件管理": 1, "磁盘管理": 2},
     ("计算机基础", "数据库"): {"MySQL": 1},
     ("计算机基础", "计算机网络"): {"面试基础": 1, "网络协议": 2},
-    ("博客建设", "GitHub Pages"): {"站点维护": 1},
 }
 
 ALIASES = OrderedDict([
@@ -107,8 +102,6 @@ ALIASES = OrderedDict([
     ("磁盘管理", ["磁盘管理"]),
     ("MySQL", ["mysql", "sql", "索引", "事务"]),
     ("计算机网络", ["tcp", "udp", "osi", "ssh", "telnet", "ospf", "计网", "数通"]),
-    ("GitHub Pages", ["github pages", "github.io"]),
-    ("Jekyll", ["jekyll"]),
 ])
 
 EXACT = {
@@ -184,7 +177,6 @@ EXACT = {
     "2026-05-27-070-linux-2.md": ("计算机基础", "Linux", "磁盘管理", ["Linux", "磁盘管理", "分区", "文件系统"]),
     "2026-05-28-071-mysql.md": ("计算机基础", "数据库", "MySQL", ["MySQL", "SQL", "索引", "事务"]),
     "2026-05-29-072-yuque-072.md": ("计算机基础", "计算机网络", "面试基础", ["计算机网络", "TCP", "UDP", "OSI"]),
-    "2026-05-29-welcome.md": ("博客建设", "GitHub Pages", "站点维护", ["GitHub Pages", "Jekyll", "博客搭建"]),
 }
 
 def split_front_matter(text: str):

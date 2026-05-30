@@ -494,6 +494,20 @@ nav {
   border-bottom: none;
 }
 
+// Homepage section headings (posts grouped by primary category)
+.home-section {
+  margin-bottom: 1.8em;
+}
+
+.home-section-title {
+  margin: 0.2em 0 0.7em;
+  font-size: 22px;
+  font-weight: 600;
+  color: $base-color;
+  border-bottom: 1px solid $divider-color;
+  padding-bottom: 0.3em;
+}
+
 .date {
   font-weight: 300;
   font-size: $small-font-size;
