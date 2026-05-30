@@ -45,6 +45,18 @@ layout: default
     </div>
   </header>
 
+  {% if page.toc %}
+    {% capture article_toc %}{% include toc.html html=content %}{% endcapture %}
+    {% if article_toc contains '<a ' %}
+      <section class="post-toc-card" aria-label="本文目录">
+        <h2 class="post-toc-card-title">本文目录</h2>
+        <nav class="post-toc-card-body">
+          {{ article_toc }}
+        </nav>
+      </section>
+    {% endif %}
+  {% endif %}
+
   <section class="post-body">
     <h2 class="content-heading">正文</h2>
     <div class="entry">

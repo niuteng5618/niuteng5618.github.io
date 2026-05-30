@@ -5,16 +5,9 @@
     <div class="site-bg-decoration" aria-hidden="true"></div>
     {% include nav.html %}
 
+    <button class="rail-collapse-button" id="railCollapseButton" type="button" aria-label="收起博客目录">收起</button>
     <aside class="right-rail" id="rightRail">
-      <button class="rail-collapse-button" id="railCollapseButton" type="button" aria-label="收起博客目录">⇥</button>
-      {% include blog-directory.html %}
-
-      {% if page.toc==true %}
-        <section class="post-toc">
-          <h2>本文目录</h2>
-          {% include toc.html html=content %}
-        </section>
-      {% endif %}
+      {% include blog-directory.html variant="rail" %}
     </aside>
 
     <div id="main" role="main" class="wrapper-content with-right-rail">

@@ -1054,10 +1054,23 @@ body.dark-mode {
 
 .categories-page .blog-directory {
   font-size: 15px;
+  padding: 26px 30px 30px;
+  border: 1px solid rgba(73, 80, 87, 0.28);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 8px 24px rgba(33, 37, 41, 0.06);
 
   details {
     margin-left: 0;
   }
+}
+
+.blog-directory-heading {
+  margin-top: 0;
+}
+
+.blog-directory--categories .blog-directory-heading {
+  font-size: 26px;
 }
 
 @media screen and (min-width: 1400px) {
@@ -1065,6 +1078,11 @@ body.dark-mode {
     padding-right: 360px;
     padding-left: 36px;
     box-sizing: border-box;
+    transition: padding 0.26s ease;
+  }
+
+  body.rail-collapsed .with-right-rail {
+    padding-right: 36px;
   }
 }
 
@@ -1167,9 +1185,11 @@ body.dark-mode {
 }
 
 .post-body {
-  margin-top: 24px;
-  padding-top: 12px;
-  border-top: 1px solid $divider-color;
+  margin-top: 28px;
+  padding: 26px 32px 32px;
+  border: 1px solid rgba(73, 80, 87, 0.28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .content-heading {
@@ -1862,7 +1882,7 @@ hr,
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, right 0.26s ease;
   z-index: 20;
 }
 
@@ -1875,6 +1895,10 @@ hr,
 @media screen and (min-width: 1400px) {
   .with-right-rail ~ .back-to-top {
     right: 378px;
+  }
+
+  body.rail-collapsed .with-right-rail ~ .back-to-top {
+    right: 24px;
   }
 }
 
@@ -2006,25 +2030,31 @@ body.dark-mode {
 // Interaction refinements
 .rail-collapse-button {
   position: fixed;
+  top: 50%;
   right: 330px;
-  top: 88px;
-  width: 34px;
-  height: 46px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 7px;
   border: 1px solid rgba(73, 80, 87, 0.28);
   border-right: 0;
   border-radius: 12px 0 0 12px;
   color: $link-color;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: -4px 6px 18px rgba(33, 37, 41, 0.12);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: -4px 6px 18px rgba(33, 37, 41, 0.14);
   cursor: pointer;
-  z-index: 5;
-  transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+  z-index: 6;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  writing-mode: vertical-rl;
+  transition: right 0.26s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .rail-collapse-button:hover {
   color: white;
   background: $link-color;
-  transform: translateX(-2px);
 }
 
 .right-rail {
@@ -2032,13 +2062,18 @@ body.dark-mode {
 }
 
 .right-rail.collapsed {
-  transform: translateX(330px);
+  transform: translateX(100%);
   box-shadow: none;
 }
 
-.right-rail.collapsed .rail-collapse-button {
-  right: 330px;
-  transform: translateX(-330px);
+body.rail-collapsed .rail-collapse-button {
+  right: 0;
+}
+
+@media screen and (max-width: 1399px) {
+  .rail-collapse-button {
+    display: none;
+  }
 }
 
 .blog-directory li.active {
@@ -2071,7 +2106,7 @@ body.dark-mode {
 }
 
 .back-to-top:hover {
-  transform: translateY(-3px) rotate(-8deg);
+  transform: translateY(-3px);
   box-shadow: 0 14px 30px rgba(33, 37, 41, 0.24);
 }
 
@@ -2172,4 +2207,85 @@ body.dark-mode {
 .image-lightbox-close:hover {
   transform: rotate(8deg) scale(1.05);
   background: rgba(34, 138, 230, 0.88);
+}
+
+
+// Article TOC card (Req 8) — shown before the post body
+.post-toc-card {
+  margin: 26px 0 0;
+  padding: 18px 24px 20px;
+  border: 1px solid rgba(73, 80, 87, 0.28);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 8px 24px rgba(33, 37, 41, 0.06);
+}
+
+.post-toc-card-title {
+  margin: 0 0 10px;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.post-toc-card-body {
+  max-height: 280px;
+  overflow-y: auto;
+  padding-right: 6px;
+  font-size: 14px;
+  line-height: 1.55em;
+}
+
+.post-toc-card-body ul {
+  margin: 4px 0 4px 16px;
+  padding: 0;
+}
+
+.post-toc-card-body > ul {
+  margin-left: 0;
+}
+
+.post-toc-card-body li {
+  margin: 5px 0;
+  padding-left: 0;
+}
+
+.post-toc-card-body li:before {
+  content: "";
+}
+
+.post-toc-card-body a {
+  color: $base-color;
+
+  &:hover {
+    color: $link-color;
+  }
+}
+
+// Heading flash when jumping from the TOC card
+@keyframes tocHeadingFlash {
+  0% {
+    background-color: rgba(34, 138, 230, 0.34);
+  }
+  60% {
+    background-color: rgba(34, 138, 230, 0.16);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.toc-flash {
+  animation: tocHeadingFlash 1.5s ease-out;
+  border-radius: 6px;
+}
+
+body.dark-mode {
+  .post-body,
+  .post-toc-card {
+    background: rgba(33, 37, 41, 0.6);
+  }
+
+  .categories-page .blog-directory {
+    background: rgba(33, 37, 41, 0.6);
+    border-color: rgba(173, 181, 189, 0.28);
+  }
 }

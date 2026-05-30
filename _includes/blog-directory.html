@@ -1,66 +1,62 @@
-<details class="blog-directory-shell" {% unless page.url == '/tags/' or page.url == '/categories/' %}open{% endunless %}>
-  <summary class="blog-directory-toggle">
-    <span>博客目录</span>
-    <span class="toggle-hint">展开/收起</span>
-  </summary>
-  <section class="blog-directory">
-    {% assign ordered_posts = site.posts | sort: "post_order" | sort: "series_order" | sort: "secondary_category_order" | sort: "primary_category_order" %}
-    {% assign primary_groups = ordered_posts | group_by: "primary_category" %}
-    {% for primary in primary_groups %}
-      {% assign primary_name = primary.name | default: "未分类" %}
-      {% assign primary_first = primary.items | first %}
-      {% assign primary_order = primary_first.primary_category_order | default: forloop.index %}
-      <details class="directory-primary" {% unless page.url == '/categories/' %}open{% endunless %}>
-        <summary>
-          <span class="directory-label">
-            <span class="directory-order">{{ primary_order }}.</span>
-            <span class="directory-title">{{ primary_name }}</span>
-          </span>
-          <span class="directory-count">{{ primary.items | size }}</span>
-        </summary>
+{% assign directory_variant = include.variant | default: "rail" %}
+<section class="blog-directory blog-directory--{{ directory_variant }}">
+  <h2 class="blog-directory-heading">目录</h2>
+  {% assign ordered_posts = site.posts | sort: "post_order" | sort: "series_order" | sort: "secondary_category_order" | sort: "primary_category_order" %}
+  {% assign primary_groups = ordered_posts | group_by: "primary_category" %}
+  {% for primary in primary_groups %}
+    {% assign primary_name = primary.name | default: "未分类" %}
+    {% assign primary_first = primary.items | first %}
+    {% assign primary_order = primary_first.primary_category_order | default: forloop.index %}
+    <details class="directory-primary" open>
+      <summary>
+        <span class="directory-label">
+          <span class="directory-order">{{ primary_order }}.</span>
+          <span class="directory-title">{{ primary_name }}</span>
+        </span>
+        <span class="directory-count">{{ primary.items | size }}</span>
+      </summary>
 
-        {% assign secondary_groups = primary.items | group_by: "secondary_category" %}
-        {% for secondary in secondary_groups %}
-          {% assign secondary_name = secondary.name | default: "未分类" %}
-          {% assign secondary_first = secondary.items | first %}
-          {% assign secondary_order = secondary_first.secondary_category_order | default: forloop.index %}
-          <details class="directory-secondary" {% unless page.url == '/categories/' %}open{% endunless %}>
-            <summary>
-              <span class="directory-label">
-                <span class="directory-order">{{ primary_order }}.{{ secondary_order }}</span>
-                <span class="directory-title">{{ secondary_name }}</span>
-              </span>
-              <span class="directory-count">{{ secondary.items | size }}</span>
-            </summary>
+      {% assign secondary_groups = primary.items | group_by: "secondary_category" %}
+      {% for secondary in secondary_groups %}
+        {% assign secondary_name = secondary.name | default: "未分类" %}
+        {% assign secondary_first = secondary.items | first %}
+        {% assign secondary_order = secondary_first.secondary_category_order | default: forloop.index %}
+        <details class="directory-secondary">
+          <summary>
+            <span class="directory-label">
+              <span class="directory-order">{{ primary_order }}.{{ secondary_order }}</span>
+              <span class="directory-title">{{ secondary_name }}</span>
+            </span>
+            <span class="directory-count">{{ secondary.items | size }}</span>
+          </summary>
 
-            {% assign series_groups = secondary.items | group_by: "series" %}
-            {% for series_group in series_groups %}
-              {% assign series_name = series_group.name | default: "其他" %}
-              {% assign series_first = series_group.items | first %}
-              {% assign series_order = series_first.series_order | default: forloop.index %}
-              <details class="directory-series">
-                <summary>
-                  <span class="directory-label">
-                    <span class="directory-order">{{ primary_order }}.{{ secondary_order }}.{{ series_order }}</span>
-                    <span class="directory-title">{{ series_name }}</span>
-                  </span>
-                  <span class="directory-count">{{ series_group.items | size }}</span>
-                </summary>
+          {% assign series_groups = secondary.items | group_by: "series" %}
+          {% for series_group in series_groups %}
+            {% assign series_name = series_group.name | default: "其他" %}
+            {% assign series_first = series_group.items | first %}
+            {% assign series_order = series_first.series_order | default: forloop.index %}
+            <details class="directory-series">
+              <summary>
+                <span class="directory-label">
+                  <span class="directory-order">{{ primary_order }}.{{ secondary_order }}.{{ series_order }}</span>
+                  <span class="directory-title">{{ series_name }}</span>
+                </span>
+                <span class="directory-count">{{ series_group.items | size }}</span>
+              </summary>
 
-                <ul>
-                  {% assign series_posts = series_group.items | sort: "post_order" %}
-                  {% for post in series_posts %}
-                    <li class="{% if page.url == post.url %}active{% endif %}">
-                      <a class="directory-post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.display_title | default: post.title }}</a>
-                      <time>{{ post.date | date: "%Y-%m-%d" }}</time>
-                    </li>
-                  {% endfor %}
-                </ul>
-              </details>
-            {% endfor %}
-          </details>
-        {% endfor %}
-      </details>
-    {% endfor %}
-  </section>
-</details>
+              <ul>
+                {% assign series_posts = series_group.items | sort: "post_order" %}
+                {% for post in series_posts %}
+                  <li class="{% if page.url == post.url %}active{% endif %}">
+                    <a class="directory-post-link" href="{{ site.baseurl }}{{ post.url }}">{{ post.display_title | default: post.title }}</a>
+                    <time>{{ post.date | date: "%Y-%m-%d" }}</time>
+                  </li>
+                {% endfor %}
+              </ul>
+            </details>
+          {% endfor %}
+        </details>
+      {% endfor %}
+    </details>
+  {% endfor %}
+</section>
