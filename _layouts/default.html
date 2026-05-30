@@ -2,6 +2,7 @@
 <html>
   {% include head.html %}
   <body>
+    <div class="site-bg-decoration" aria-hidden="true"></div>
     {% include nav.html %}
 
     <aside class="right-rail">
@@ -30,5 +31,7 @@
     </footer>
   </div>
   {% include theme-toggle.html %}
+  {% include back-to-top.html %}
+  <script src="{{ site.baseurl }}/js/site-interactions.js"></script>
 
 </html>

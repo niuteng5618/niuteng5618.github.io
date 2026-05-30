@@ -27,7 +27,7 @@ author: niuteng5618
 # 🔹完整请求模拟（带模拟数据）
 
 
-**<font style="color:#DF2A3F;">logits</font>**一般指的是，神经网络**最后一层的输出。**
+**logits**一般指的是，神经网络**最后一层的输出。**
 
 ### 用户输入
 ```plain

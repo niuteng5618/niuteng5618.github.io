@@ -10,7 +10,14 @@ permalink: /tags/
 
 <div class="tags tags-page">
   <section class="tag-cloud">
-    <h2>标签云</h2>
+    <div class="tag-cloud-header">
+      <div>
+        <h2>标签云</h2>
+        <p>输入关键词快速筛选标签和对应文章。</p>
+      </div>
+      <label class="tag-search-label" for="tagSearch">搜索标签</label>
+    </div>
+    <input id="tagSearch" class="tag-search-input" type="search" placeholder="输入标签或文章关键词..." autocomplete="off">
     <ul class="label">
       {% for tag in site.tags %}
       <li>
