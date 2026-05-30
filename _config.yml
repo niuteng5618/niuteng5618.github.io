@@ -7,8 +7,6 @@ favicon: /images/favicon.jpg
 navigation:
   - name: 首页
     url: /
-  - name: 关于
-    url: /about
   - name: 目录
     url: /categories
   - name: 标签

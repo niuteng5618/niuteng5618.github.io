@@ -1,89 +1,52 @@
 ---
 layout: default
 ---
-<div class="search-container">
-  <input type="text" id="search-input" placeholder="search blog posts..." style="width: 90%;
-    height: 35px;
-    background-color: rgba(227,231,236,.2);
-    line-height: 35px;
-    margin-top: 20px;
-    padding:10px 16px;
-    border: 1px solid #c0c0c0;
-    font-size: 16px;
-    border-radius: 17px;
-    outline: none;
-    box-sizing: border-box;
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102,175,233,.6);">
-  <ul id="results-container"></ul>
-</div>
 
-<!--script src="https://unpkg.com/simple-jekyll-search/dest/simple-jekyll-search.min.js"></script-->
-<script src="{{ site.baseurl }}/js/simple-jekyll-search.min.js"></script>
+<!-- Hero Section -->
+<section class="hero-section">
+  <h1>欢迎来到我的技术博客</h1>
+  <p class="hero-intro">
+    这里记录我在人工智能领域的学习与实践，专注于大模型、智能体开发、强化学习等前沿技术。
+    作为一名 AI 技术初学者，我希望通过分享学习笔记和项目经验，与大家共同成长。
+  </p>
 
-<script>
-  window.simpleJekyllSearch = new SimpleJekyllSearch({
-    searchInput: document.getElementById('search-input'),
-    resultsContainer: document.getElementById('results-container'),
-    json: '{{ site.baseurl }}/search.json',
-    searchResultTemplate: '<li><a href="{url}?query={query}" title="{desc}">{title}</a></li>',
-    noResultsText: 'No results found',
-    limit: 10,
-    fuzzy: false,
-    exclude: ['Welcome']
-  })
-</script>
+  <div class="tech-stack">
+    <h3>涵盖技术领域</h3>
+    <ul>
+      <li>🤖 大模型基础 (LLaMA, Transformer, Attention, KV Cache, 量化)</li>
+      <li>🧠 强化学习 (PPO, DPO, GRPO, Q-learning)</li>
+      <li>🔧 智能体开发 (Agent, MCP, Skill, RAG, LangChain)</li>
+      <li>📊 深度学习 (RNN, LSTM, 激活函数, 正则化, 知识蒸馏)</li>
+      <li>⚡ 模型优化 (并行策略, FlashAttention, Embedding, 推理加速)</li>
+    </ul>
+  </div>
 
-{% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-{% endif %}
+  <a href="{{ site.baseurl }}/categories" class="btn-primary">📚 浏览完整目录</a>
+</section>
 
-{% assign primary_groups = site.posts | sort: "primary_category_order" | group_by: "primary_category" %}
-{% for group in primary_groups %}
-<section class="home-section">
-  <h2 class="home-section-title">{{ group.name }}</h2>
-  <div class="posts">
-    {% assign section_posts = group.items | sort: "date" | reverse %}
-    {% for post in section_posts %}
-    {% unless post.draft %}
-      <article class="post">
-        <h1>
+<!-- Featured Posts Section -->
+<section class="featured-section">
+  <h2>精选文章</h2>
+  <div class="featured-posts">
+    {% assign featured_slugs = "004-llama,069-linux,025-embeddingrerank,010-yuque-010,040-rag-2" | split: "," %}
+    {% for slug in featured_slugs %}
+      {% assign post = site.posts | where_exp: "p", "p.url contains slug" | first %}
+      {% if post %}
+      <article class="featured-post-card">
+        <h3>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.display_title | default: post.title }}</a>
-        </h1>
-
-        <div class="post-card-meta">
-          <span class="date">{{ post.date | date: "%Y-%m-%d" }}</span>
+        </h3>
+        <div class="post-meta">
           {% if post.primary_category or post.secondary_category or post.series %}
             <span class="category-path">
               {% if post.primary_category %}<span>{{ post.primary_category }}</span>{% endif %}
-              {% if post.secondary_category %}<span>/</span><span>{{ post.secondary_category }}</span>{% endif %}
-              {% if post.series %}<span>/</span><span>{{ post.series }}</span>{% endif %}
+              {% if post.secondary_category %}<span> / </span><span>{{ post.secondary_category }}</span>{% endif %}
+              {% if post.series %}<span> / </span><span>{{ post.series }}</span>{% endif %}
             </span>
           {% endif %}
         </div>
-
-        {% if post.tags %}
-        <div class="post-card-tags">
-          <span class="meta-label">标签</span>
-          <ul class="tag">
-            {% for tag in post.tags %}
-            <li>
-              <a href="{{ site.url }}{{ site.baseurl }}/tags#{{ tag }}">
-                {{ tag }}
-              </a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endif %}
-
-        <div class="entry">
-          {{ post.excerpt | truncate: 200 }}
-        </div>
-
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
       </article>
-    {% endunless %}
+      {% endif %}
     {% endfor %}
   </div>
 </section>
-{% endfor %}

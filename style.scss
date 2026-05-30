@@ -1524,3 +1524,172 @@ body.dark-mode {
     border-color: rgba(173, 181, 189, 0.16);
   }
 }
+
+// Homepage Hero Section
+.hero-section {
+  background: linear-gradient(135deg, rgba(79, 172, 254, 0.08), rgba(0, 242, 254, 0.05));
+  border: 1px solid rgba(79, 172, 254, 0.2);
+  border-radius: 12px;
+  padding: 48px 40px;
+  margin-bottom: 48px;
+
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: $darkerGray;
+  }
+
+  .hero-intro {
+    font-size: 1.15em;
+    line-height: 1.8;
+    color: $gray;
+    margin-bottom: 32px;
+  }
+
+  .tech-stack {
+    margin-bottom: 32px;
+
+    h3 {
+      font-size: 1.3em;
+      margin-bottom: 16px;
+      color: $darkGray;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 8px 0;
+        font-size: 1.05em;
+        color: $gray;
+      }
+    }
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: transform 0.2s, box-shadow 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(79, 172, 254, 0.3);
+    }
+  }
+}
+
+// Featured Posts Section
+.featured-section {
+  border-top: 2px solid rgba(134, 142, 150, 0.15);
+  padding-top: 48px;
+
+  > h2 {
+    font-size: 2em;
+    margin-bottom: 32px;
+    color: $darkerGray;
+    text-align: center;
+  }
+
+  .featured-posts {
+    display: grid;
+    gap: 20px;
+  }
+
+  .featured-post-card {
+    background: rgba(248, 249, 250, 0.5);
+    border: 1px solid rgba(134, 142, 150, 0.15);
+    border-radius: 8px;
+    padding: 24px 28px;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+
+    &:hover {
+      transform: translateX(4px);
+      box-shadow: 0 4px 12px rgba(33, 37, 41, 0.08);
+      border-color: rgba(79, 172, 254, 0.4);
+    }
+
+    h3 {
+      margin: 0 0 12px 0;
+      font-size: 1.3em;
+
+      a {
+        color: $darkerGray;
+        text-decoration: none;
+
+        &:hover {
+          color: #4facfe;
+        }
+      }
+    }
+
+    .post-meta {
+      .category-path {
+        font-size: 0.95em;
+        color: $gray;
+
+        span {
+          &:not(:first-child) {
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Dark mode support for homepage
+body.dark-mode {
+  .hero-section {
+    background: linear-gradient(135deg, rgba(79, 172, 254, 0.12), rgba(0, 242, 254, 0.08));
+    border-color: rgba(79, 172, 254, 0.3);
+
+    h1 {
+      color: $lightGray;
+    }
+
+    .hero-intro,
+    .tech-stack ul li {
+      color: $base-color;
+    }
+
+    .tech-stack h3 {
+      color: $lightGray;
+    }
+  }
+
+  .featured-section {
+    border-top-color: rgba(173, 181, 189, 0.2);
+
+    > h2 {
+      color: $lightGray;
+    }
+
+    .featured-post-card {
+      background: rgba(52, 58, 64, 0.5);
+      border-color: rgba(173, 181, 189, 0.16);
+
+      &:hover {
+        border-color: rgba(79, 172, 254, 0.5);
+      }
+
+      h3 a {
+        color: $lightGray;
+
+        &:hover {
+          color: #80acff;
+        }
+      }
+
+      .post-meta .category-path {
+        color: $base-color;
+      }
+    }
+  }
+}
