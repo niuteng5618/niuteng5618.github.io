@@ -45,45 +45,5 @@
         });
       });
     }
-
-    var postEntry = document.querySelector('.post-detail .entry');
-    if (postEntry) {
-      var headings = Array.prototype.slice.call(postEntry.querySelectorAll('h2, h3'));
-      headings.forEach(function (heading, index) {
-        if (!heading.parentNode || heading.closest('.post-section-collapse')) {
-          return;
-        }
-
-        var sectionContent = [];
-        var node = heading.nextElementSibling;
-        while (node && !/^H[23]$/.test(node.tagName)) {
-          sectionContent.push(node);
-          node = node.nextElementSibling;
-        }
-
-        if (sectionContent.length < 2) {
-          return;
-        }
-
-        var details = document.createElement('details');
-        details.className = 'post-section-collapse';
-        details.open = true;
-
-        var summary = document.createElement('summary');
-        summary.className = 'post-section-summary';
-        summary.textContent = heading.textContent || ('章节 ' + (index + 1));
-
-        var wrapper = document.createElement('div');
-        wrapper.className = 'post-section-content';
-
-        heading.parentNode.insertBefore(details, heading);
-        details.appendChild(summary);
-        sectionContent.forEach(function (item) {
-          wrapper.appendChild(item);
-        });
-        details.appendChild(wrapper);
-        heading.remove();
-      });
-    }
   });
 })();
