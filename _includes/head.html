@@ -39,4 +39,18 @@
     };
   </script>
   <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      if (window.mermaid) {
+        document.querySelectorAll('pre > code.language-mermaid').forEach(function (code) {
+          var container = document.createElement('div');
+          container.className = 'mermaid';
+          container.textContent = code.textContent;
+          code.parentNode.replaceWith(container);
+        });
+        window.mermaid.initialize({ startOnLoad: true, securityLevel: 'loose' });
+      }
+    });
+  </script>
 </head>

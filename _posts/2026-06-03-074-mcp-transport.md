@@ -3,7 +3,7 @@ layout: post
 title: "MCP 支持哪些传输协议？通俗讲解"
 display_title: "MCP 支持哪些传输协议？通俗讲解"
 display_filename: "MCP传输协议区别联系？.md"
-date: 2026-05-30
+date: 2026-06-03
 primary_category: "智能体应用开发"
 secondary_category: "Agent 工具链"
 series: "MCP"

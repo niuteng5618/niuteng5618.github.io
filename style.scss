@@ -1791,10 +1791,11 @@ hr,
 
 .entry table {
   display: block;
-  width: 100%;
+  width: max-content;
+  min-width: min(68%, 100%);
   max-width: 100%;
   overflow-x: auto;
-  margin: 1.4rem 0;
+  margin: 1.4rem auto;
   border: 1px solid rgba(73, 80, 87, 0.42);
   border-radius: 12px;
   border-collapse: separate;
@@ -1899,25 +1900,46 @@ hr,
   position: fixed;
   right: 24px;
   bottom: 28px;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(34, 138, 230, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  padding: 0;
+  border: 0;
   border-radius: 999px;
   color: white;
-  background: linear-gradient(135deg, rgba(34, 138, 230, 0.94), rgba(54, 79, 199, 0.94));
-  box-shadow: 0 10px 26px rgba(33, 37, 41, 0.18);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 10px 26px rgba(33, 37, 41, 0.16);
   cursor: pointer;
   opacity: 0;
   transform: translateY(8px);
   pointer-events: none;
-  transition: opacity 0.2s ease, transform 0.2s ease, right 0.26s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease, right 0.26s ease, filter 0.2s ease;
   z-index: 20;
+
+  img {
+    display: block;
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 3px rgba(33, 37, 41, 0.18));
+  }
+
+  &:hover {
+    filter: brightness(1.06);
+    transform: translateY(-2px);
+  }
 }
 
 .back-to-top.visible {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+.back-to-top.visible:hover {
+  transform: translateY(-2px);
 }
 
 @media screen and (min-width: 1400px) {

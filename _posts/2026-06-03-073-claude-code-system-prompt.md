@@ -3,7 +3,7 @@ layout: post
 title: "Claude Code System Prompt 的运行时组装逻辑"
 display_title: "Claude Code System Prompt 的运行时组装逻辑"
 display_filename: "Claude Code System Prompt 的运行时组装逻辑.md"
-date: 2026-05-30
+date: 2026-06-03
 primary_category: "智能体应用开发"
 secondary_category: "AI 编程工具"
 series: "Claude Code / Codex"

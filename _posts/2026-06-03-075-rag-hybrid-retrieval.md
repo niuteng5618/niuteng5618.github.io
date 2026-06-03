@@ -3,7 +3,7 @@ layout: post
 title: "RAG 混合检索：BM25、Embedding 检索、RRF 与 Cross-Encoder Rerank"
 display_title: "RAG 混合检索：BM25、Embedding 检索、RRF 与 Cross-Encoder Rerank"
 display_filename: "RAG混合检索：BM25、向量检索与RRF工程实践.md"
-date: 2026-05-30
+date: 2026-06-03
 primary_category: "RAG"
 secondary_category: "检索与排序"
 series: "混合检索"
