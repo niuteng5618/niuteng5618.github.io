@@ -35,7 +35,8 @@
             {% assign series_name = series_group.name | default: "其他" %}
             {% assign series_first = series_group.items | first %}
             {% assign series_order = series_first.series_order | default: forloop.index %}
-            <details class="directory-series">
+            {% assign active_series_count = series_group.items | where: "url", page.url | size %}
+            <details class="directory-series"{% if active_series_count > 0 %} open{% endif %}>
               <summary>
                 <span class="directory-label">
                   <span class="directory-order">{{ primary_order }}.{{ secondary_order }}.{{ series_order }}</span>

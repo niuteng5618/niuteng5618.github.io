@@ -1669,6 +1669,34 @@ body.dark-mode {
         }
       }
     }
+
+    .featured-post-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 18px;
+      padding: 8px 18px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+      color: white;
+      font-size: 0.95em;
+      font-weight: 600;
+      line-height: 1.2em;
+      box-shadow: 0 4px 12px rgba(79, 172, 254, 0.2);
+
+      &:hover,
+      &:active,
+      &:focus {
+        color: white;
+        transform: translateY(-1px);
+        box-shadow: 0 6px 16px rgba(79, 172, 254, 0.3);
+      }
+
+      &:focus {
+        outline: 2px solid rgba(79, 172, 254, 0.5);
+        outline-offset: 2px;
+      }
+    }
   }
 }
 

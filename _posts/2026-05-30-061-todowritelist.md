@@ -4,16 +4,16 @@ title: "TodoWriteList"
 display_title: "TodoWriteList"
 display_filename: "TodoWriteList.md"
 date: 2026-05-30
-primary_category: "人工智能技术"
-secondary_category: "智能体应用开发"
+primary_category: "智能体应用开发"
+secondary_category: "AI 编程工具"
 series: "Claude Code / Codex"
-primary_category_order: 1
-secondary_category_order: 8
-series_order: 4
+primary_category_order: 5
+secondary_category_order: 3
+series_order: 1
 post_order: 61
 categories:
-  - 人工智能技术
   - 智能体应用开发
+  - AI 编程工具
   - Claude Code / Codex
 tags:
   - Claude Code / Codex

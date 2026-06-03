@@ -4,16 +4,16 @@ title: "KVcache（3）——包含KVcache完整请求示例"
 display_title: "KVcache（3）——包含KVcache完整请求示例"
 display_filename: "KVcache（3）——包含KVcache完整请求示例.md"
 date: 2026-05-30
-primary_category: "人工智能技术"
-secondary_category: "大模型推理"
+primary_category: "大模型技术"
+secondary_category: "推理与部署"
 series: "KV Cache"
-primary_category_order: 1
+primary_category_order: 2
 secondary_category_order: 5
 series_order: 4
 post_order: 30
 categories:
-  - 人工智能技术
-  - 大模型推理
+  - 大模型技术
+  - 推理与部署
   - KV Cache
 tags:
   - KV Cache

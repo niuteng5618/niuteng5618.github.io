@@ -4,16 +4,16 @@ title: "Flash Attention & Paged Attention"
 display_title: "Flash Attention & Paged Attention"
 display_filename: "Flash Attention & Paged Attention.md"
 date: 2026-05-30
-primary_category: "人工智能技术"
-secondary_category: "大模型基础"
+primary_category: "大模型技术"
+secondary_category: "模型架构与基础"
 series: "Attention"
-primary_category_order: 1
+primary_category_order: 2
 secondary_category_order: 2
 series_order: 2
 post_order: 27
 categories:
-  - 人工智能技术
-  - 大模型基础
+  - 大模型技术
+  - 模型架构与基础
   - Attention
 tags:
   - Attention

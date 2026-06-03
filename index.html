@@ -28,7 +28,7 @@ layout: home
 <section class="featured-section">
   <h2>精选文章</h2>
   <div class="featured-posts">
-    {% assign featured_slugs = "004-llama,069-linux,025-embeddingrerank,010-yuque-010,040-rag-2" | split: "," %}
+    {% assign featured_slugs = "004-llama,073-claude-code-system-prompt,025-embeddingrerank,040-rag-2,075-rag-hybrid-retrieval" | split: "," %}
     {% for slug in featured_slugs %}
       {% assign post = site.posts | where_exp: "p", "p.url contains slug" | first %}
       {% if post %}
@@ -45,6 +45,7 @@ layout: home
             </span>
           {% endif %}
         </div>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="featured-post-button" aria-label="阅读全文：{{ post.display_title | default: post.title }}">阅读全文</a>
       </article>
       {% endif %}
     {% endfor %}

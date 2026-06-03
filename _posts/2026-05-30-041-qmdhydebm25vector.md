@@ -4,16 +4,16 @@ title: "qmd——融合hyde、bm25、Vector的文档检索方法"
 display_title: "qmd——融合hyde、bm25、Vector的文档检索方法"
 display_filename: "qmd——融合hyde、bm25、Vector的文档检索方法.md"
 date: 2026-05-30
-primary_category: "人工智能技术"
-secondary_category: "RAG系统"
+primary_category: "RAG"
+secondary_category: "检索与排序"
 series: "混合检索"
-primary_category_order: 1
-secondary_category_order: 6
-series_order: 5
+primary_category_order: 3
+secondary_category_order: 2
+series_order: 3
 post_order: 41
 categories:
-  - 人工智能技术
-  - RAG系统
+  - RAG
+  - 检索与排序
   - 混合检索
 tags:
   - 混合检索
