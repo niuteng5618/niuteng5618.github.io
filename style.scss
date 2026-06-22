@@ -1658,6 +1658,17 @@ body.dark-mode {
     }
 
     .post-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 6px 14px;
+
+      .post-date {
+        font-size: 0.9em;
+        color: $gray;
+        font-variant-numeric: tabular-nums;
+      }
+
       .category-path {
         font-size: 0.95em;
         color: $gray;
