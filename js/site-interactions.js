@@ -21,6 +21,30 @@
       });
     }
 
+    // 左侧博客信息区（头像 / 站名 / 导航）的折叠：状态记入 localStorage，刷新后保持
+    var sidebarCollapseButton = document.getElementById('sidebarCollapseButton');
+    if (sidebarCollapseButton) {
+      var applySidebarState = function (collapsed) {
+        document.body.classList.toggle('sidebar-collapsed', collapsed);
+        sidebarCollapseButton.textContent = collapsed ? '展开' : '收起';
+        sidebarCollapseButton.setAttribute('aria-label', collapsed ? '展开博客信息' : '收起博客信息');
+      };
+
+      if (window.localStorage && localStorage.getItem('sidebar-collapsed') === '1') {
+        applySidebarState(true);
+      }
+
+      sidebarCollapseButton.addEventListener('click', function () {
+        var collapsed = !document.body.classList.contains('sidebar-collapsed');
+        applySidebarState(collapsed);
+        try {
+          localStorage.setItem('sidebar-collapsed', collapsed ? '1' : '0');
+        } catch (e) {
+          // 隐私模式下 localStorage 可能不可用，忽略即可
+        }
+      });
+    }
+
     // 进入文档后：右栏目录展开当前文章所在链路，其余只显示到二级，并滚动定位到当前文章
     var activeItem = document.querySelector('.right-rail .blog-directory li.active');
     if (activeItem && rightRail) {

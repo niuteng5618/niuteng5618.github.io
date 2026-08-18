@@ -2137,6 +2137,66 @@ body.rail-collapsed .rail-collapse-button {
   }
 }
 
+// 左侧博客信息区（头像 / niuteng5618's blog / 导航）的折叠：与右栏目录按钮同一套交互
+.sidebar-collapse-button {
+  position: fixed;
+  top: 50%;
+  left: 25%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 7px;
+  border: 1px solid rgba(73, 80, 87, 0.28);
+  border-left: 0;
+  border-radius: 0 12px 12px 0;
+  color: $link-color;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 4px 6px 18px rgba(33, 37, 41, 0.14);
+  cursor: pointer;
+  z-index: 6;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  writing-mode: vertical-rl;
+  transition: left 0.26s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.sidebar-collapse-button:hover {
+  color: white;
+  background: $link-color;
+}
+
+.wrapper-sidebar {
+  transition: transform 0.26s ease;
+}
+
+body.sidebar-collapsed .wrapper-sidebar {
+  transform: translateX(-100%);
+}
+
+body.sidebar-collapsed .sidebar-collapse-button {
+  left: 0;
+}
+
+.wrapper-content {
+  transition: width 0.26s ease;
+}
+
+body.sidebar-collapsed .wrapper-content {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  .sidebar-collapse-button {
+    display: none;
+  }
+
+  body.sidebar-collapsed .wrapper-sidebar {
+    transform: none;
+  }
+}
+
 .blog-directory li.active {
   scroll-margin: 80px;
 }
@@ -2205,6 +2265,17 @@ body.dark-mode {
   }
 
   .rail-collapse-button:hover {
+    color: #212529;
+    background: #80acff;
+  }
+
+  .sidebar-collapse-button {
+    color: #80acff;
+    background: rgba(33, 37, 41, 0.96);
+    border-color: rgba(173, 181, 189, 0.28);
+  }
+
+  .sidebar-collapse-button:hover {
     color: #212529;
     background: #80acff;
   }
