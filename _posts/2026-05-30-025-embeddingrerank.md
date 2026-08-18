@@ -132,5 +132,5 @@ Embedding 快，Rerank 慢，根本原因在于 Layer 3 (Transformer Blocks) 中
 
 + 匹配侧（极速）： 模型生成 Query 向量后，后续的 100 次比较不再经过复杂的 Transformer 层，而是直接在向量数据库中进行一次简单的点乘运算（时间复杂度仅为 ![image](/images/yuque/025-embeddingrerank/image-22-8cc67886.svg)，例如只做 768 次乘法和加法）。
 
-**总结：  
-**Embedding 快是因为它巧妙地避开了实时的 ![image](/images/yuque/025-embeddingrerank/image-14-dfc1f880.svg) 注意力计算，将最重的运算转移到了离线阶段，把实时的匹配简化成了 ![image](/images/yuque/025-embeddingrerank/image-22-8cc67886.svg) 的向量点乘；而 Rerank 慢是因为它强行在实时阶段，将 Query 和 Doc 绑在一起，承受了完整的 ![image](/images/yuque/025-embeddingrerank/image-25-fcef38a5.svg) 深度特征交叉计算。这就如同“看摘要找书（Embedding）”和“逐字精读对比（Rerank）”的时间差异。
+**总结：**  
+Embedding 快是因为它巧妙地避开了实时的 ![image](/images/yuque/025-embeddingrerank/image-14-dfc1f880.svg) 注意力计算，将最重的运算转移到了离线阶段，把实时的匹配简化成了 ![image](/images/yuque/025-embeddingrerank/image-22-8cc67886.svg) 的向量点乘；而 Rerank 慢是因为它强行在实时阶段，将 Query 和 Doc 绑在一起，承受了完整的 ![image](/images/yuque/025-embeddingrerank/image-25-fcef38a5.svg) 深度特征交叉计算。这就如同“看摘要找书（Embedding）”和“逐字精读对比（Rerank）”的时间差异。
