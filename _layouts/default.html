@@ -7,9 +7,12 @@
 
     <button class="rail-collapse-button" id="railCollapseButton" type="button" aria-label="收起侧栏目录">收起</button>
     <aside class="right-rail" id="rightRail">
-      {% comment %}文章页：右栏显示本文目录（无目录的文章回退到全局目录）；其他页面：全局目录{% endcomment %}
-      {% if page.layout == 'post' and page.toc %}
-        {% capture rail_toc %}{% include toc.html html=content h_min=2 h_max=3 %}{% endcapture %}
+      {% comment %}文章页：右栏显示本文目录；文章无标题层级时显示“无目录层级”。其他页面：全局目录。
+      注意 TOC 必须从 page.content 原始 markdown 生成（与正文卡片同源），
+      不能解析 layout 渲染后的 content，否则结构性标题会干扰标题层级推断。{% endcomment %}
+      {% if page.layout == 'post' %}
+        {% capture rendered_post %}{{ page.content | markdownify }}{% endcapture %}
+        {% capture rail_toc %}{% include toc.html html=rendered_post %}{% endcapture %}
         {% if rail_toc contains '<a ' %}
           <section class="post-toc" aria-label="本文目录">
             <h2 class="post-toc-title">本文目录</h2>
@@ -18,7 +21,10 @@
             </nav>
           </section>
         {% else %}
-          {% include blog-directory.html variant="rail" %}
+          <section class="post-toc post-toc--empty" aria-label="本文目录">
+            <h2 class="post-toc-title">本文目录</h2>
+            <p class="post-toc-empty">无目录层级</p>
+          </section>
         {% endif %}
       {% else %}
         {% include blog-directory.html variant="rail" %}
