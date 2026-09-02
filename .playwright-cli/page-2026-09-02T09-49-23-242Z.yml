@@ -1,0 +1,374 @@
+- generic [active]:
+  - generic [ref=e1]:
+    - banner [ref=e2]:
+      - generic [ref=e3]:
+        - link [ref=e4] [cursor=pointer]:
+          - /url: /
+        - heading [level=1] [ref=e6] [cursor=pointer]:
+          - link "niuteng5618's blog" [ref=e7]:
+            - /url: /
+        - paragraph [ref=e8]: niuteng5618 的个人博客
+    - navigation [ref=e10]:
+      - link "首页" [ref=e11] [cursor=pointer]:
+        - /url: /
+      - link "目录" [ref=e12] [cursor=pointer]:
+        - /url: /categories
+      - link "标签" [ref=e13] [cursor=pointer]:
+        - /url: /tags
+    - generic [ref=e15]:
+      - heading "目录" [level=2] [ref=e16]
+      - group [ref=e17]:
+        - generic "1. 传统深度学习 9" [ref=e18] [cursor=pointer]:
+          - generic [ref=e19]:
+            - generic [ref=e20]: "1."
+            - generic [ref=e21]: 传统深度学习
+          - generic [ref=e22]: "9"
+        - group [ref=e23]:
+          - generic "1.1 基础概念 5" [ref=e24] [cursor=pointer]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: "1.1"
+              - generic [ref=e27]: 基础概念
+            - generic [ref=e28]: "5"
+        - group [ref=e29]:
+          - generic "1.2 序列模型 3" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]:
+              - generic [ref=e32]: "1.2"
+              - generic [ref=e33]: 序列模型
+            - generic [ref=e34]: "3"
+        - group [ref=e35]:
+          - generic "1.3 工程实践 1" [ref=e36] [cursor=pointer]:
+            - generic [ref=e37]:
+              - generic [ref=e38]: "1.3"
+              - generic [ref=e39]: 工程实践
+            - generic [ref=e40]: "1"
+      - group [ref=e41]:
+        - generic "2. 大模型技术 31" [ref=e42] [cursor=pointer]:
+          - generic [ref=e43]:
+            - generic [ref=e44]: "2."
+            - generic [ref=e45]: 大模型技术
+          - generic [ref=e46]: "31"
+        - group [ref=e47]:
+          - generic "2.1 学习路线 3" [ref=e48] [cursor=pointer]:
+            - generic [ref=e49]:
+              - generic [ref=e50]: "2.1"
+              - generic [ref=e51]: 学习路线
+            - generic [ref=e52]: "3"
+        - group [ref=e53]:
+          - generic "2.2 模型架构与基础 9" [ref=e54] [cursor=pointer]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: "2.2"
+              - generic [ref=e57]: 模型架构与基础
+            - generic [ref=e58]: "9"
+        - group [ref=e59]:
+          - generic "2.3 训练与微调 2" [ref=e60] [cursor=pointer]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: "2.3"
+              - generic [ref=e63]: 训练与微调
+            - generic [ref=e64]: "2"
+        - group [ref=e65]:
+          - generic "2.4 训练基础设施 3" [ref=e66] [cursor=pointer]:
+            - generic [ref=e67]:
+              - generic [ref=e68]: "2.4"
+              - generic [ref=e69]: 训练基础设施
+            - generic [ref=e70]: "3"
+        - group [ref=e71]:
+          - generic "2.5 推理与部署 14" [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]:
+              - generic [ref=e74]: "2.5"
+              - generic [ref=e75]: 推理与部署
+            - generic [ref=e76]: "14"
+      - group [ref=e77]:
+        - generic "3. RAG 15" [ref=e78] [cursor=pointer]:
+          - generic [ref=e79]:
+            - generic [ref=e80]: "3."
+            - generic [ref=e81]: RAG
+          - generic [ref=e82]: "15"
+        - group [ref=e83]:
+          - generic "3.1 基础与流程 2" [ref=e84] [cursor=pointer]:
+            - generic [ref=e85]:
+              - generic [ref=e86]: "3.1"
+              - generic [ref=e87]: 基础与流程
+            - generic [ref=e88]: "2"
+        - group [ref=e89]:
+          - generic "3.2 检索与排序 6" [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]:
+              - generic [ref=e92]: "3.2"
+              - generic [ref=e93]: 检索与排序
+            - generic [ref=e94]: "6"
+        - group [ref=e95]:
+          - generic "3.3 图谱与框架 3" [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]:
+              - generic [ref=e98]: "3.3"
+              - generic [ref=e99]: 图谱与框架
+            - generic [ref=e100]: "3"
+        - group [ref=e101]:
+          - generic "3.4 Prompt与评测 2" [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]:
+              - generic [ref=e104]: "3.4"
+              - generic [ref=e105]: Prompt与评测
+            - generic [ref=e106]: "2"
+        - group [ref=e107]:
+          - generic "3.5 先进方法 2" [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]:
+              - generic [ref=e110]: "3.5"
+              - generic [ref=e111]: 先进方法
+            - generic [ref=e112]: "2"
+      - group [ref=e113]:
+        - generic "4. 强化学习与对齐 6" [ref=e114] [cursor=pointer]:
+          - generic [ref=e115]:
+            - generic [ref=e116]: "4."
+            - generic [ref=e117]: 强化学习与对齐
+          - generic [ref=e118]: "6"
+        - group [ref=e119]:
+          - generic "4.1 偏好优化 1" [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]:
+              - generic [ref=e122]: "4.1"
+              - generic [ref=e123]: 偏好优化
+            - generic [ref=e124]: "1"
+        - group [ref=e125]:
+          - generic "4.2 策略优化 3" [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: "4.2"
+              - generic [ref=e129]: 策略优化
+            - generic [ref=e130]: "3"
+        - group [ref=e131]:
+          - generic "4.3 价值学习 2" [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]:
+              - generic [ref=e134]: "4.3"
+              - generic [ref=e135]: 价值学习
+            - generic [ref=e136]: "2"
+      - group [ref=e137]:
+        - generic "5. 智能体应用开发 14" [ref=e138] [cursor=pointer]:
+          - generic [ref=e139]:
+            - generic [ref=e140]: "5."
+            - generic [ref=e141]: 智能体应用开发
+          - generic [ref=e142]: "14"
+        - group [ref=e143]:
+          - generic "5.1 Agent 工具链 4" [ref=e144] [cursor=pointer]:
+            - generic [ref=e145]:
+              - generic [ref=e146]: "5.1"
+              - generic [ref=e147]: Agent 工具链
+            - generic [ref=e148]: "4"
+        - group [ref=e149]:
+          - generic "5.2 多智能体框架 2" [ref=e150] [cursor=pointer]:
+            - generic [ref=e151]:
+              - generic [ref=e152]: "5.2"
+              - generic [ref=e153]: 多智能体框架
+            - generic [ref=e154]: "2"
+        - group [ref=e155]:
+          - generic "5.3 AI 编程工具 8" [ref=e156] [cursor=pointer]:
+            - generic [ref=e157]:
+              - generic [ref=e158]: "5.3"
+              - generic [ref=e159]: AI 编程工具
+            - generic [ref=e160]: "8"
+          - group [ref=e161]:
+            - generic "5.3.1 Claude Code / Codex 8" [ref=e162] [cursor=pointer]:
+              - generic [ref=e163]:
+                - generic [ref=e164]: 5.3.1
+                - generic [ref=e165]: Claude Code / Codex
+              - generic [ref=e166]: "8"
+            - list [ref=e167]:
+              - listitem [ref=e168]:
+                - link "ClaudeCode上下文压缩" [ref=e169] [cursor=pointer]:
+                  - /url: /058-claudecode/
+                - time [ref=e170]: 2026-05-30
+              - listitem [ref=e171]:
+                - link "Codex上下文压缩-compact" [ref=e172] [cursor=pointer]:
+                  - /url: /059-codex-compact/
+                - time [ref=e173]: 2026-05-30
+              - listitem [ref=e174]:
+                - link "Hook(钩子)" [ref=e175] [cursor=pointer]:
+                  - /url: /060-hook/
+                - time [ref=e176]: 2026-05-30
+              - listitem [ref=e177]:
+                - link "TodoWriteList" [ref=e178] [cursor=pointer]:
+                  - /url: /061-todowritelist/
+                - time [ref=e179]: 2026-05-30
+              - listitem [ref=e180]:
+                - link "Claude Code System Prompt 的运行时组装逻辑" [ref=e181] [cursor=pointer]:
+                  - /url: /073-claude-code-system-prompt/
+                - time [ref=e182]: 2026-06-03
+              - listitem [ref=e183]:
+                - link "Circuit Breaker 熔断器机制" [ref=e184] [cursor=pointer]:
+                  - /url: /076-circuit-breaker/
+                - time [ref=e185]: 2026-06-22
+              - listitem [ref=e186]:
+                - link "Claude Code Context Compact 上下文压缩机制" [ref=e187] [cursor=pointer]:
+                  - /url: /077-claude-code-context-compact/
+                - time [ref=e188]: 2026-06-22
+              - listitem [ref=e189]:
+                - link "Claude Code Memory 存储机制" [ref=e190] [cursor=pointer]:
+                  - /url: /078-claude-code-memory/
+                - time [ref=e191]: 2026-06-22
+      - group [ref=e192]:
+        - generic "6. 热点问题分析 1" [ref=e193] [cursor=pointer]:
+          - generic [ref=e194]:
+            - generic [ref=e195]: "6."
+            - generic [ref=e196]: 热点问题分析
+          - generic [ref=e197]: "1"
+        - group [ref=e198]:
+          - generic "6.1 模型输出异常 1" [ref=e199] [cursor=pointer]:
+            - generic [ref=e200]:
+              - generic [ref=e201]: "6.1"
+              - generic [ref=e202]: 模型输出异常
+            - generic [ref=e203]: "1"
+      - group [ref=e204]:
+        - generic "7. 算法与面试 1" [ref=e205] [cursor=pointer]:
+          - generic [ref=e206]:
+            - generic [ref=e207]: "7."
+            - generic [ref=e208]: 算法与面试
+          - generic [ref=e209]: "1"
+        - group [ref=e210]:
+          - generic "7.1 算法面试 1" [ref=e211] [cursor=pointer]:
+            - generic [ref=e212]:
+              - generic [ref=e213]: "7.1"
+              - generic [ref=e214]: 算法面试
+            - generic [ref=e215]: "1"
+    - contentinfo [ref=e217]:
+      - list [ref=e218]:
+        - listitem [ref=e219]:
+          - text: •
+          - link "GitHub":
+            - /url: https://github.com/niuteng5618
+            - img [ref=e220] [cursor=pointer]
+        - listitem [ref=e222]:
+          - text: •
+          - link "RSS":
+            - /url: /feed.xml
+            - img [ref=e223] [cursor=pointer]
+      - paragraph [ref=e225]: Copyright (c) 2026 niuteng5618
+  - button "收起博客信息" [ref=e226] [cursor=pointer]: 收起
+  - main [ref=e227]:
+    - generic [ref=e228]:
+      - article [ref=e229]:
+        - generic [ref=e230]:
+          - generic [ref=e231]:
+            - generic [ref=e232]: 文件名
+            - code [ref=e233]: Hook(钩子).md
+          - heading "Hook(钩子)" [level=1] [ref=e234]
+          - generic [ref=e235]:
+            - generic [ref=e236]:
+              - generic [ref=e237]: 日期
+              - time [ref=e238]: 2026-05-30
+            - generic [ref=e239]:
+              - generic [ref=e240]: 分类
+              - generic [ref=e241]: 5. 智能体应用开发 /5.3 AI 编程工具 /5.3.1 Claude Code / Codex
+            - generic [ref=e242]:
+              - generic [ref=e243]: 标签
+              - list [ref=e244]:
+                - listitem [ref=e245]:
+                  - link "Claude Code / Codex" [ref=e246] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#Claude Code / Codex
+                - listitem [ref=e247]:
+                  - link "Hook" [ref=e248] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#Hook
+                - listitem [ref=e249]:
+                  - link "钩子" [ref=e250] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#钩子
+                - listitem [ref=e251]:
+                  - link "自动化" [ref=e252] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#自动化
+                - listitem [ref=e253]:
+                  - link "开发工具" [ref=e254] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#开发工具
+        - region "本文目录" [ref=e255]:
+          - heading "本文目录" [level=2] [ref=e256]
+          - navigation [ref=e257]:
+            - list [ref=e258]:
+              - listitem [ref=e259]:
+                - link "名词解释" [ref=e260] [cursor=pointer]:
+                  - /url: "#名词解释"
+                - list [ref=e261]:
+                  - listitem [ref=e262]:
+                    - link "hook 在agnet_loop里是什么意思？" [ref=e263] [cursor=pointer]:
+                      - /url: "#hook-在agnet_loop里是什么意思"
+                  - listitem [ref=e264]:
+                    - link "在项目里，hook 的本质是什么？" [ref=e265] [cursor=pointer]:
+                      - /url: "#在项目里hook-的本质是什么"
+              - listitem [ref=e266]:
+                - link "动机" [ref=e267] [cursor=pointer]:
+                  - /url: "#动机"
+              - listitem [ref=e268]:
+                - link "hook构建" [ref=e269] [cursor=pointer]:
+                  - /url: "#hook构建"
+              - listitem [ref=e270]:
+                - link "Hook示例-点外卖" [ref=e271] [cursor=pointer]:
+                  - /url: "#hook示例-点外卖"
+        - generic [ref=e272]:
+          - heading "正文" [level=2] [ref=e273]
+          - generic [ref=e274]:
+            - blockquote [ref=e275]:
+              - paragraph [ref=e276]: “挂在循环上, 不写进循环里” — hook 在工具执行前后注入扩展逻辑。
+            - paragraph [ref=e277]:
+              - strong [ref=e278]: Hook
+              - text: 是Harness中的重要一环，不写进循环，以扩展的形式注入循环中。
+            - heading "名词解释" [level=2] [ref=e279]
+            - paragraph [ref=e280]: Hook 这个词可以理解成： 钩子 / 挂钩 / 插入点 / 扩展点
+            - paragraph [ref=e281]:
+              - text: 最直观的翻译是：
+              - strong [ref=e282]: 钩子
+              - text: 。但不要把它想成“钓鱼钩”，而要把它想成：
+            - paragraph [ref=e283]: 程序运行到某个关键位置时，提前留好的一个“可以挂东西的点”。
+            - heading "hook 在agnet_loop里是什么意思？" [level=3] [ref=e284]
+            - paragraph [ref=e285]: Agent 的主循环大概是：
+            - paragraph [ref=e286]: :::color1 用户输入 → 调用 LLM → LLM 决定是否调用工具 → 工具执行前 → 执行工具
+            - code [ref=e290]: ↓ 把结果交回 LLM ← 工具执行后
+            - paragraph [ref=e291]: ":::"
+            - paragraph [ref=e292]: "** 这里面有几个关键时刻，这些地方就可以留 hook：**"
+            - paragraph [ref=e293]: :::color1 用户输入之后
+            - paragraph [ref=e294]: 工具执行之前
+            - paragraph [ref=e295]: 工具执行之后
+            - paragraph [ref=e296]: Agent 准备停止之前
+            - paragraph [ref=e297]: ":::"
+            - separator [ref=e298]
+            - paragraph [ref=e299]: 比如：
+            - code [ref=e303]: "trigger_hooks(\"PreToolUse\", block) # 意思是： # 现在马上要执行工具了，所有注册在 PreToolUse 这个位置的 hook，都可以出来干活了。"
+            - separator [ref=e304]
+            - heading "在项目里，hook 的本质是什么？" [level=3] [ref=e305]
+            - paragraph [ref=e306]: "** 本质上就是：某个事件发生时，自动调用一批提前注册好的函数。**"
+            - paragraph [ref=e307]: 也就是：
+            - code [ref=e311]: "HOOKS = { \"PreToolUse\": [], \"PostToolUse\": [], }"
+            - paragraph [ref=e312]: 注册一个 hook：
+            - code [ref=e316]: "def log_hook(block): print(\"即将执行工具:\", block.name) register_hook(\"PreToolUse\", log_hook)"
+            - paragraph [ref=e317]: 触发 hook：
+            - code [ref=e321]: trigger_hooks("PreToolUse", block)
+            - paragraph [ref=e322]: 完整意思是：
+            - paragraph [ref=e323]: 把 log_hook 这个函数挂到 PreToolUse 这个事件上。
+            - paragraph [ref=e324]: 以后每次执行工具前，就自动调用 log_hook。
+            - heading "动机" [level=2] [ref=e325]
+            - paragraph [ref=e326]: 如果我们想给agent_loop额外添加几项功能，如 记录每次bash调用、记录操作后自动 git add，那么，每次新增功能都要修改 agent_loop 函数。
+            - paragraph [ref=e327]: 循环很快就变成了这样：
+            - code [ref=e331]: "def agent_loop(messages): while True: # ... LLM call ... for block in response.content: if block.type != \"tool_use\": continue log_to_file(block) # 加一行 check_permission(block) # 加一行 notify_slack(block) # 又加一行 output = execute(block) auto_git_add(block) # 再加一行 # ... 很快循环就认不出来了"
+            - heading "hook构建" [level=2] [ref=e332]
+            - paragraph [ref=e333]: 为了解决上述问题，故引入hook。
+            - paragraph [ref=e334]: “hook 不写进循环里”不是说循环里完全没有 hook 相关代码，而是说具体扩展逻辑不写进循环里。
+            - paragraph [ref=e335]: 循环只保留一个很薄的“挂点”：
+            - code [ref=e339]: blocked = trigger_hooks("PreToolUse", block)
+            - paragraph [ref=e340]: 真正的逻辑，比如权限检查、日志记录、大输出提醒，都写在外面的 hook 函数里，再注册进去：
+            - code [ref=e344]: register_hook("PreToolUse", permission_hook) register_hook("PreToolUse", log_hook) register_hook("PostToolUse", large_output_hook)
+            - paragraph [ref=e345]: 让循环只认识事件，不认识具体扩展：
+            - code [ref=e349]: "def agent_loop(messages): while True: response = call_llm(messages) for block in response.content: if block.type != \"tool_use\": continue blocked = trigger_hooks(\"PreToolUse\", block) if blocked: continue output = execute_tool(block) trigger_hooks(\"PostToolUse\", block, output)"
+            - paragraph [ref=e350]: 这时要加日志，不改循环：
+            - code [ref=e354]: "def log_hook(block): print(\"准备执行工具:\", block.name) register_hook(\"PreToolUse\", log_hook)"
+            - paragraph [ref=e355]: 要加权限检查，也不改循环：
+            - code [ref=e359]: "def permission_hook(block): if block.name == \"bash\" and \"rm -rf\" in block.input[\"command\"]: return \"禁止危险命令\" return None register_hook(\"PreToolUse\", permission_hook)"
+            - paragraph [ref=e360]: 要加执行后的检查，还是不改循环：
+            - code [ref=e364]: "def large_output_hook(block, output): register_hook(\"PostToolUse\", large_output_hook) if len(output) > 100000: print(\"输出太大了\")"
+            - heading "Hook示例-点外卖" [level=2] [ref=e365]
+            - paragraph [ref=e366]: 一个更生活化的例子：假设你有一个“点外卖流程”。
+            - paragraph [ref=e367]: 侵入式写法：
+            - code [ref=e371]: "def order_food(): choose_restaurant() check_coupon() check_balance() log_order() notify_friend() pay() send_receipt()"
+            - paragraph [ref=e372]: 后来每多一个需求，都要改 order_food()。
+            - paragraph [ref=e373]: hook 写法：
+            - code [ref=e377]: "def order_food(): choose_restaurant() trigger_hooks(\"BeforePay\") pay() trigger_hooks(\"AfterPay\")"
+            - paragraph [ref=e378]: 外面想加什么就注册什么：
+            - code [ref=e382]: register_hook("BeforePay", check_coupon) register_hook("BeforePay", check_balance) register_hook("BeforePay", log_order) register_hook("AfterPay", send_receipt) register_hook("AfterPay", notify_friend)
+            - paragraph [ref=e383]: order_food() 不再关心“有哪些额外动作”，它只负责在关键节点喊一声：“现在到付款前了，谁要处理自己来。”
+      - generic [ref=e384]:
+        - link "← 上一篇" [ref=e386] [cursor=pointer]:
+          - /url: https://niuteng5618.github.io/059-codex-compact/
+        - link "下一篇 →" [ref=e388] [cursor=pointer]:
+          - /url: https://niuteng5618.github.io/061-todowritelist/
+  - text: • •
+  - generic [ref=e389] [cursor=pointer]
+  - button "返回顶部"

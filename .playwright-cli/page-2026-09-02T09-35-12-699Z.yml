@@ -1,0 +1,293 @@
+- generic [active]:
+  - generic [ref=f5e1]:
+    - banner [ref=f5e2]:
+      - generic [ref=f5e3]:
+        - link [ref=f5e4] [cursor=pointer]:
+          - /url: /
+        - heading [level=1] [ref=f5e6] [cursor=pointer]:
+          - link "niuteng5618's blog" [ref=f5e7]:
+            - /url: /
+        - paragraph [ref=f5e8]: niuteng5618 的个人博客
+    - navigation [ref=f5e10]:
+      - link "首页" [ref=f5e11] [cursor=pointer]:
+        - /url: /
+      - link "目录" [ref=f5e12] [cursor=pointer]:
+        - /url: /categories
+      - link "标签" [ref=f5e13] [cursor=pointer]:
+        - /url: /tags
+    - generic [ref=f5e15]:
+      - heading "目录" [level=2] [ref=f5e16]
+      - group [ref=f5e17]:
+        - generic "1. 传统深度学习 9" [ref=f5e18] [cursor=pointer]:
+          - generic [ref=f5e19]:
+            - generic [ref=f5e20]: "1."
+            - generic [ref=f5e21]: 传统深度学习
+          - generic [ref=f5e22]: "9"
+        - group [ref=f5e23]:
+          - generic "1.1 基础概念 5" [ref=f5e24] [cursor=pointer]:
+            - generic [ref=f5e25]:
+              - generic [ref=f5e26]: "1.1"
+              - generic [ref=f5e27]: 基础概念
+            - generic [ref=f5e28]: "5"
+        - group [ref=f5e29]:
+          - generic "1.2 序列模型 3" [ref=f5e30] [cursor=pointer]:
+            - generic [ref=f5e31]:
+              - generic [ref=f5e32]: "1.2"
+              - generic [ref=f5e33]: 序列模型
+            - generic [ref=f5e34]: "3"
+          - group [ref=f5e35]:
+            - generic "1.2.1 RNN / LSTM 1" [ref=f5e36] [cursor=pointer]:
+              - generic [ref=f5e37]:
+                - generic [ref=f5e38]: 1.2.1
+                - generic [ref=f5e39]: RNN / LSTM
+              - generic [ref=f5e40]: "1"
+          - group [ref=f5e41]:
+            - generic "1.2.2 xLSTM 2" [ref=f5e42] [cursor=pointer]:
+              - generic [ref=f5e43]:
+                - generic [ref=f5e44]: 1.2.2
+                - generic [ref=f5e45]: xLSTM
+              - generic [ref=f5e46]: "2"
+            - list [ref=f5e47]:
+              - listitem [ref=f5e48]:
+                - link "xLSTM-mLSTM" [ref=f5e49] [cursor=pointer]:
+                  - /url: /067-xlstm-mlstm/
+                - time [ref=f5e50]: 2026-05-30
+              - listitem [ref=f5e51]:
+                - link "xLSTM算法" [ref=f5e52] [cursor=pointer]:
+                  - /url: /068-xlstm/
+                - time [ref=f5e53]: 2026-05-30
+        - group [ref=f5e54]:
+          - generic "1.3 工程实践 1" [ref=f5e55] [cursor=pointer]:
+            - generic [ref=f5e56]:
+              - generic [ref=f5e57]: "1.3"
+              - generic [ref=f5e58]: 工程实践
+            - generic [ref=f5e59]: "1"
+      - group [ref=f5e60]:
+        - generic "2. 大模型技术 31" [ref=f5e61] [cursor=pointer]:
+          - generic [ref=f5e62]:
+            - generic [ref=f5e63]: "2."
+            - generic [ref=f5e64]: 大模型技术
+          - generic [ref=f5e65]: "31"
+        - group [ref=f5e66]:
+          - generic "2.1 学习路线 3" [ref=f5e67] [cursor=pointer]:
+            - generic [ref=f5e68]:
+              - generic [ref=f5e69]: "2.1"
+              - generic [ref=f5e70]: 学习路线
+            - generic [ref=f5e71]: "3"
+        - group [ref=f5e72]:
+          - generic "2.2 模型架构与基础 9" [ref=f5e73] [cursor=pointer]:
+            - generic [ref=f5e74]:
+              - generic [ref=f5e75]: "2.2"
+              - generic [ref=f5e76]: 模型架构与基础
+            - generic [ref=f5e77]: "9"
+        - group [ref=f5e78]:
+          - generic "2.3 训练与微调 2" [ref=f5e79] [cursor=pointer]:
+            - generic [ref=f5e80]:
+              - generic [ref=f5e81]: "2.3"
+              - generic [ref=f5e82]: 训练与微调
+            - generic [ref=f5e83]: "2"
+        - group [ref=f5e84]:
+          - generic "2.4 训练基础设施 3" [ref=f5e85] [cursor=pointer]:
+            - generic [ref=f5e86]:
+              - generic [ref=f5e87]: "2.4"
+              - generic [ref=f5e88]: 训练基础设施
+            - generic [ref=f5e89]: "3"
+        - group [ref=f5e90]:
+          - generic "2.5 推理与部署 14" [ref=f5e91] [cursor=pointer]:
+            - generic [ref=f5e92]:
+              - generic [ref=f5e93]: "2.5"
+              - generic [ref=f5e94]: 推理与部署
+            - generic [ref=f5e95]: "14"
+      - group [ref=f5e96]:
+        - generic "3. RAG 15" [ref=f5e97] [cursor=pointer]:
+          - generic [ref=f5e98]:
+            - generic [ref=f5e99]: "3."
+            - generic [ref=f5e100]: RAG
+          - generic [ref=f5e101]: "15"
+        - group [ref=f5e102]:
+          - generic "3.1 基础与流程 2" [ref=f5e103] [cursor=pointer]:
+            - generic [ref=f5e104]:
+              - generic [ref=f5e105]: "3.1"
+              - generic [ref=f5e106]: 基础与流程
+            - generic [ref=f5e107]: "2"
+        - group [ref=f5e108]:
+          - generic "3.2 检索与排序 6" [ref=f5e109] [cursor=pointer]:
+            - generic [ref=f5e110]:
+              - generic [ref=f5e111]: "3.2"
+              - generic [ref=f5e112]: 检索与排序
+            - generic [ref=f5e113]: "6"
+        - group [ref=f5e114]:
+          - generic "3.3 图谱与框架 3" [ref=f5e115] [cursor=pointer]:
+            - generic [ref=f5e116]:
+              - generic [ref=f5e117]: "3.3"
+              - generic [ref=f5e118]: 图谱与框架
+            - generic [ref=f5e119]: "3"
+        - group [ref=f5e120]:
+          - generic "3.4 Prompt与评测 2" [ref=f5e121] [cursor=pointer]:
+            - generic [ref=f5e122]:
+              - generic [ref=f5e123]: "3.4"
+              - generic [ref=f5e124]: Prompt与评测
+            - generic [ref=f5e125]: "2"
+        - group [ref=f5e126]:
+          - generic "3.5 先进方法 2" [ref=f5e127] [cursor=pointer]:
+            - generic [ref=f5e128]:
+              - generic [ref=f5e129]: "3.5"
+              - generic [ref=f5e130]: 先进方法
+            - generic [ref=f5e131]: "2"
+      - group [ref=f5e132]:
+        - generic "4. 强化学习与对齐 6" [ref=f5e133] [cursor=pointer]:
+          - generic [ref=f5e134]:
+            - generic [ref=f5e135]: "4."
+            - generic [ref=f5e136]: 强化学习与对齐
+          - generic [ref=f5e137]: "6"
+        - group [ref=f5e138]:
+          - generic "4.1 偏好优化 1" [ref=f5e139] [cursor=pointer]:
+            - generic [ref=f5e140]:
+              - generic [ref=f5e141]: "4.1"
+              - generic [ref=f5e142]: 偏好优化
+            - generic [ref=f5e143]: "1"
+        - group [ref=f5e144]:
+          - generic "4.2 策略优化 3" [ref=f5e145] [cursor=pointer]:
+            - generic [ref=f5e146]:
+              - generic [ref=f5e147]: "4.2"
+              - generic [ref=f5e148]: 策略优化
+            - generic [ref=f5e149]: "3"
+        - group [ref=f5e150]:
+          - generic "4.3 价值学习 2" [ref=f5e151] [cursor=pointer]:
+            - generic [ref=f5e152]:
+              - generic [ref=f5e153]: "4.3"
+              - generic [ref=f5e154]: 价值学习
+            - generic [ref=f5e155]: "2"
+      - group [ref=f5e156]:
+        - generic "5. 智能体应用开发 14" [ref=f5e157] [cursor=pointer]:
+          - generic [ref=f5e158]:
+            - generic [ref=f5e159]: "5."
+            - generic [ref=f5e160]: 智能体应用开发
+          - generic [ref=f5e161]: "14"
+        - group [ref=f5e162]:
+          - generic "5.1 Agent 工具链 4" [ref=f5e163] [cursor=pointer]:
+            - generic [ref=f5e164]:
+              - generic [ref=f5e165]: "5.1"
+              - generic [ref=f5e166]: Agent 工具链
+            - generic [ref=f5e167]: "4"
+        - group [ref=f5e168]:
+          - generic "5.2 多智能体框架 2" [ref=f5e169] [cursor=pointer]:
+            - generic [ref=f5e170]:
+              - generic [ref=f5e171]: "5.2"
+              - generic [ref=f5e172]: 多智能体框架
+            - generic [ref=f5e173]: "2"
+        - group [ref=f5e174]:
+          - generic "5.3 AI 编程工具 8" [ref=f5e175] [cursor=pointer]:
+            - generic [ref=f5e176]:
+              - generic [ref=f5e177]: "5.3"
+              - generic [ref=f5e178]: AI 编程工具
+            - generic [ref=f5e179]: "8"
+      - group [ref=f5e180]:
+        - generic "6. 热点问题分析 1" [ref=f5e181] [cursor=pointer]:
+          - generic [ref=f5e182]:
+            - generic [ref=f5e183]: "6."
+            - generic [ref=f5e184]: 热点问题分析
+          - generic [ref=f5e185]: "1"
+        - group [ref=f5e186]:
+          - generic "6.1 模型输出异常 1" [ref=f5e187] [cursor=pointer]:
+            - generic [ref=f5e188]:
+              - generic [ref=f5e189]: "6.1"
+              - generic [ref=f5e190]: 模型输出异常
+            - generic [ref=f5e191]: "1"
+      - group [ref=f5e192]:
+        - generic "7. 算法与面试 1" [ref=f5e193] [cursor=pointer]:
+          - generic [ref=f5e194]:
+            - generic [ref=f5e195]: "7."
+            - generic [ref=f5e196]: 算法与面试
+          - generic [ref=f5e197]: "1"
+        - group [ref=f5e198]:
+          - generic "7.1 算法面试 1" [ref=f5e199] [cursor=pointer]:
+            - generic [ref=f5e200]:
+              - generic [ref=f5e201]: "7.1"
+              - generic [ref=f5e202]: 算法面试
+            - generic [ref=f5e203]: "1"
+    - contentinfo [ref=f5e205]:
+      - list [ref=f5e206]:
+        - listitem [ref=f5e207]:
+          - text: •
+          - link "GitHub":
+            - /url: https://github.com/niuteng5618
+            - img [ref=f5e208] [cursor=pointer]
+        - listitem [ref=f5e210]:
+          - text: •
+          - link "RSS":
+            - /url: /feed.xml
+            - img [ref=f5e211] [cursor=pointer]
+      - paragraph [ref=f5e213]: Copyright (c) 2026 niuteng5618
+  - button "收起博客信息" [ref=f5e214] [cursor=pointer]: 收起
+  - button "收起侧栏目录" [ref=f5e215] [cursor=pointer]: 收起
+  - complementary [ref=f5e216]:
+    - region "本文目录" [ref=f5e217]:
+      - heading "本文目录" [level=2] [ref=f5e218]
+      - paragraph [ref=f5e219]: 无目录层级
+  - main [ref=f5e220]:
+    - generic [ref=f5e221]:
+      - article [ref=f5e222]:
+        - generic [ref=f5e223]:
+          - generic [ref=f5e224]:
+            - generic [ref=f5e225]: 文件名
+            - code [ref=f5e226]: xLSTM算法.md
+          - heading "xLSTM算法" [level=1] [ref=f5e227]
+          - generic [ref=f5e228]:
+            - generic [ref=f5e229]:
+              - generic [ref=f5e230]: 日期
+              - time [ref=f5e231]: 2026-05-30
+            - generic [ref=f5e232]:
+              - generic [ref=f5e233]: 分类
+              - generic [ref=f5e234]: 1. 传统深度学习 /1.2 序列模型 /1.2.2 xLSTM
+            - generic [ref=f5e235]:
+              - generic [ref=f5e236]: 标签
+              - list [ref=f5e237]:
+                - listitem [ref=f5e238]:
+                  - link "xLSTM" [ref=f5e239] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#xLSTM
+                - listitem [ref=f5e240]:
+                  - link "LSTM" [ref=f5e241] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#LSTM
+                - listitem [ref=f5e242]:
+                  - link "算法" [ref=f5e243] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#算法
+        - generic [ref=f5e244]:
+          - heading "正文" [level=2] [ref=f5e245]
+          - generic [ref=f5e246]:
+            - paragraph [ref=f5e247]: xLSTM（Extended Long Short-Term Memory）是一种通过引入指数门控，残差连接，并行架构对传统 LSTM（Long Short-Term Memory）模型进行扩展和改进的新时序模型。
+            - paragraph [ref=f5e248]: xLSTM由sLSTM和mLSTM交替堆叠构成。其中，作者通过修改LSTM的存储结构，构建了具有标量存储和标量更新的sLSTM和具有矩阵存储的完全并行化的mLSTM。
+            - paragraph [ref=f5e249]:
+              - strong [ref=f5e250]: sLSTM
+            - paragraph [ref=f5e251]: sLSTM的结构如图所示。
+            - paragraph [ref=f5e252]
+            - paragraph [ref=f5e253]: 相比于LSTM，sLSTM在记忆单元中假如指数门控(输入们和遗忘门的sigmoid变为指数函数exp())，并对隐状态进行标准化。sLSTM的输入通过一个kernel_size为4的因果卷积，该卷积层采用swish激活函数，用于输入门和遗忘门。随后将输入门i、遗忘门f、输出们o和记忆细胞更新z，通过具有四个对角块的块对角线性层。最后，隐状态通过组归一化层(GroupNorm Layer)对每个记忆头进行归一化，使用带有GeLU激活函数和投影因子为4/3的门控MLP进行上投影和下投影。
+            - paragraph [ref=f5e254]: 因此sLSTM在时间步t的更新规则如下：
+            - paragraph [ref=f5e255]
+            - paragraph [ref=f5e256]: 由于指数门可能会导致溢出，作者引入稳定状态mt来稳定门控，因此新的输入门、遗忘门更新规则如下：
+            - paragraph [ref=f5e257]
+            - paragraph [ref=f5e258]:
+              - strong [ref=f5e259]: mLSTM
+            - paragraph [ref=f5e260]: mLSTM的结构如图所示。
+            - paragraph [ref=f5e261]
+            - paragraph [ref=f5e262]: mLSTM将记忆单元中的记忆细胞从标量扩展到到矩阵，允许xLSTM模型捕获输入数据中更复杂的关系，从而提高需要理解序列任务的性能。mLSTM外层结构同样为层归一化残差结构。在进行投影因子为2的投影后，分别作为外部输出们和mLSTM记忆单元的输入。对于记忆单元的输入，同样采用kernel_size为4和激活函数为swish的因果卷积进行特征提取。随后，使用四个对角块的块对角投影矩阵进行线性变换，得到q、k、v，其中v跳过卷积层，由记忆单元的输入进行线性变换得到。隐状态在输出后进行组归一化，并与可学习跳跃输入(LSkip)相加，在经过下投影后，与残差连接进行相加后输出。
+            - paragraph [ref=f5e263]: 与sLSTM相同，mLSTM也引入稳定状态mt来稳定门控，但mLSTM中多个记忆单元是等价的，没有记忆混合现象，因此可以将mLSTM的循环计算重构为并行计算。具体而言，mLSTM在时间步t内的更新规则如下：
+            - paragraph [ref=f5e264]
+            - paragraph [ref=f5e265]: 在sLSTM和mLSTM的构建中，kernel_size为4的causalConv被用于处理输入数据。causalConv只关注当前和过去的操作，不会获取未来的信息，使其在处理时序数据时不违反时间的因果关系，这对于序列预测任务非常重要。
+            - paragraph [ref=f5e266]: 然而，因果卷积的感受野取决于卷积核的大小，虽然可以通过堆叠多个卷积层来扩大感受野，但每一层卷积的本质仍然是在捕获局部特征，在长距离依赖问题中仍然具有局限性。
+            - paragraph [ref=f5e267]: 自注意力机制被广泛用于各种深度学习任务中，其允许序列中的每个位置直接与所有其他位置进行交互，通过计算查询、键和值之间的相似度分数，并进行加权求和来生成整个输入序列的计算结果。在流量检测任务中，流量数据具有很强的时序性。
+            - paragraph [ref=f5e268]: 为了使模型更好地捕捉和利用这种时序信息，我们提出一种改进的xLSTM模型,名为CAxLSTM。通过引入因果注意力机制代替causalConv，重新构建sLSTM块和mLSTM块。
+            - paragraph [ref=f5e269]: 因果注意力机制通常对自注意力权重矩阵A添加一个掩码矩阵M，该矩阵满足公式：
+            - paragraph [ref=f5e270]
+            - paragraph [ref=f5e271]: 矩阵M的上三角部分(未来时刻)为负无穷，下三角部分(过去时刻)为0。在与原始权重矩阵A进行相加后得到Amask矩阵，如公式所示。
+            - paragraph [ref=f5e272]
+            - paragraph [ref=f5e273]: 矩阵Amask的下三角部分仍然为原始权重，而上三角部分变为负无穷大(表示模型获取该部分信息)。通过这种掩码操作，在Softmax计算后，上三角部分权重变为0，这意味着模型只能关注到过去及当前时刻的时间步信息。
+            - paragraph [ref=f5e274]: 最终，本文采用由一个sLSTM块和一个mLSTM块构成的CAxLSTM作为MBLB模块的最后一层。
+      - generic [ref=f5e275]:
+        - link "← 上一篇" [ref=f5e277] [cursor=pointer]:
+          - /url: https://niuteng5618.github.io/067-xlstm-mlstm/
+        - link "下一篇 →" [ref=f5e279] [cursor=pointer]:
+          - /url: https://niuteng5618.github.io/073-claude-code-system-prompt/
+  - text: • •
+  - generic [ref=f5e280] [cursor=pointer]
+  - button "返回顶部"

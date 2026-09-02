@@ -1,0 +1,3 @@
+[     813ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_CLOSED @ https://p.typekit.net/p.gif?s=1&k=vbt3gjx&ht=tk&h=127.0.0.1&f=33866.33867.33868&a=6944049&js=1.12.0&app=typekit&e=js&_=1788342643485:0
+[     816ms] Uncaught (in promise) Error: Network request failed
+    at f.onerror (https://use.typekit.net/vbt3gjx.js:36:231)

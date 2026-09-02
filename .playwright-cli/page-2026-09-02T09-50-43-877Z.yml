@@ -1,0 +1,503 @@
+- generic [active]:
+  - generic [ref=f1e1]:
+    - banner [ref=f1e2]:
+      - generic [ref=f1e3]:
+        - link [ref=f1e4] [cursor=pointer]:
+          - /url: /
+        - heading [level=1] [ref=f1e6] [cursor=pointer]:
+          - link "niuteng5618's blog" [ref=f1e7]:
+            - /url: /
+        - paragraph [ref=f1e8]: niuteng5618 的个人博客
+    - navigation [ref=f1e10]:
+      - link "首页" [ref=f1e11] [cursor=pointer]:
+        - /url: /
+      - link "目录" [ref=f1e12] [cursor=pointer]:
+        - /url: /categories
+      - link "标签" [ref=f1e13] [cursor=pointer]:
+        - /url: /tags
+    - generic [ref=f1e15]:
+      - heading "目录" [level=2] [ref=f1e16]
+      - group [ref=f1e17]:
+        - generic "1. 传统深度学习 9" [ref=f1e18] [cursor=pointer]:
+          - generic [ref=f1e19]:
+            - generic [ref=f1e20]: "1."
+            - generic [ref=f1e21]: 传统深度学习
+          - generic [ref=f1e22]: "9"
+        - group [ref=f1e23]:
+          - generic "1.1 基础概念 5" [ref=f1e24] [cursor=pointer]:
+            - generic [ref=f1e25]:
+              - generic [ref=f1e26]: "1.1"
+              - generic [ref=f1e27]: 基础概念
+            - generic [ref=f1e28]: "5"
+        - group [ref=f1e29]:
+          - generic "1.2 序列模型 3" [ref=f1e30] [cursor=pointer]:
+            - generic [ref=f1e31]:
+              - generic [ref=f1e32]: "1.2"
+              - generic [ref=f1e33]: 序列模型
+            - generic [ref=f1e34]: "3"
+        - group [ref=f1e35]:
+          - generic "1.3 工程实践 1" [ref=f1e36] [cursor=pointer]:
+            - generic [ref=f1e37]:
+              - generic [ref=f1e38]: "1.3"
+              - generic [ref=f1e39]: 工程实践
+            - generic [ref=f1e40]: "1"
+      - group [ref=f1e41]:
+        - generic "2. 大模型技术 31" [ref=f1e42] [cursor=pointer]:
+          - generic [ref=f1e43]:
+            - generic [ref=f1e44]: "2."
+            - generic [ref=f1e45]: 大模型技术
+          - generic [ref=f1e46]: "31"
+        - group [ref=f1e47]:
+          - generic "2.1 学习路线 3" [ref=f1e48] [cursor=pointer]:
+            - generic [ref=f1e49]:
+              - generic [ref=f1e50]: "2.1"
+              - generic [ref=f1e51]: 学习路线
+            - generic [ref=f1e52]: "3"
+        - group [ref=f1e53]:
+          - generic "2.2 模型架构与基础 9" [ref=f1e54] [cursor=pointer]:
+            - generic [ref=f1e55]:
+              - generic [ref=f1e56]: "2.2"
+              - generic [ref=f1e57]: 模型架构与基础
+            - generic [ref=f1e58]: "9"
+        - group [ref=f1e59]:
+          - generic "2.3 训练与微调 2" [ref=f1e60] [cursor=pointer]:
+            - generic [ref=f1e61]:
+              - generic [ref=f1e62]: "2.3"
+              - generic [ref=f1e63]: 训练与微调
+            - generic [ref=f1e64]: "2"
+        - group [ref=f1e65]:
+          - generic "2.4 训练基础设施 3" [ref=f1e66] [cursor=pointer]:
+            - generic [ref=f1e67]:
+              - generic [ref=f1e68]: "2.4"
+              - generic [ref=f1e69]: 训练基础设施
+            - generic [ref=f1e70]: "3"
+        - group [ref=f1e71]:
+          - generic "2.5 推理与部署 14" [ref=f1e72] [cursor=pointer]:
+            - generic [ref=f1e73]:
+              - generic [ref=f1e74]: "2.5"
+              - generic [ref=f1e75]: 推理与部署
+            - generic [ref=f1e76]: "14"
+      - group [ref=f1e77]:
+        - generic "3. RAG 15" [ref=f1e78] [cursor=pointer]:
+          - generic [ref=f1e79]:
+            - generic [ref=f1e80]: "3."
+            - generic [ref=f1e81]: RAG
+          - generic [ref=f1e82]: "15"
+        - group [ref=f1e83]:
+          - generic "3.1 基础与流程 2" [ref=f1e84] [cursor=pointer]:
+            - generic [ref=f1e85]:
+              - generic [ref=f1e86]: "3.1"
+              - generic [ref=f1e87]: 基础与流程
+            - generic [ref=f1e88]: "2"
+        - group [ref=f1e89]:
+          - generic "3.2 检索与排序 6" [ref=f1e90] [cursor=pointer]:
+            - generic [ref=f1e91]:
+              - generic [ref=f1e92]: "3.2"
+              - generic [ref=f1e93]: 检索与排序
+            - generic [ref=f1e94]: "6"
+          - group [ref=f1e95]:
+            - generic "3.2.1 Query 改写 1" [ref=f1e96] [cursor=pointer]:
+              - generic [ref=f1e97]:
+                - generic [ref=f1e98]: 3.2.1
+                - generic [ref=f1e99]: Query 改写
+              - generic [ref=f1e100]: "1"
+          - group [ref=f1e101]:
+            - generic "3.2.2 检索排序 1" [ref=f1e102] [cursor=pointer]:
+              - generic [ref=f1e103]:
+                - generic [ref=f1e104]: 3.2.2
+                - generic [ref=f1e105]: 检索排序
+              - generic [ref=f1e106]: "1"
+          - group [ref=f1e107]:
+            - generic "3.2.3 混合检索 3" [ref=f1e108] [cursor=pointer]:
+              - generic [ref=f1e109]:
+                - generic [ref=f1e110]: 3.2.3
+                - generic [ref=f1e111]: 混合检索
+              - generic [ref=f1e112]: "3"
+            - list [ref=f1e113]:
+              - listitem [ref=f1e114]:
+                - link "qmd——融合hyde、bm25、Vector的文档检索方法" [ref=f1e115] [cursor=pointer]:
+                  - /url: /041-qmdhydebm25vector/
+                - time [ref=f1e116]: 2026-05-30
+              - listitem [ref=f1e117]:
+                - link "混合检索方法——RRF、线性加权" [ref=f1e118] [cursor=pointer]:
+                  - /url: /044-rrf/
+                - time [ref=f1e119]: 2026-05-30
+              - listitem [ref=f1e120]:
+                - link "RAG 混合检索：BM25、Embedding 检索、RRF 与 Cross-Encoder Rerank" [ref=f1e121] [cursor=pointer]:
+                  - /url: /075-rag-hybrid-retrieval/
+                - time [ref=f1e122]: 2026-06-03
+          - group [ref=f1e123]:
+            - generic "3.2.4 RAG 优化技巧 1" [ref=f1e124] [cursor=pointer]:
+              - generic [ref=f1e125]:
+                - generic [ref=f1e126]: 3.2.4
+                - generic [ref=f1e127]: RAG 优化技巧
+              - generic [ref=f1e128]: "1"
+        - group [ref=f1e129]:
+          - generic "3.3 图谱与框架 3" [ref=f1e130] [cursor=pointer]:
+            - generic [ref=f1e131]:
+              - generic [ref=f1e132]: "3.3"
+              - generic [ref=f1e133]: 图谱与框架
+            - generic [ref=f1e134]: "3"
+        - group [ref=f1e135]:
+          - generic "3.4 Prompt与评测 2" [ref=f1e136] [cursor=pointer]:
+            - generic [ref=f1e137]:
+              - generic [ref=f1e138]: "3.4"
+              - generic [ref=f1e139]: Prompt与评测
+            - generic [ref=f1e140]: "2"
+        - group [ref=f1e141]:
+          - generic "3.5 先进方法 2" [ref=f1e142] [cursor=pointer]:
+            - generic [ref=f1e143]:
+              - generic [ref=f1e144]: "3.5"
+              - generic [ref=f1e145]: 先进方法
+            - generic [ref=f1e146]: "2"
+      - group [ref=f1e147]:
+        - generic "4. 强化学习与对齐 6" [ref=f1e148] [cursor=pointer]:
+          - generic [ref=f1e149]:
+            - generic [ref=f1e150]: "4."
+            - generic [ref=f1e151]: 强化学习与对齐
+          - generic [ref=f1e152]: "6"
+        - group [ref=f1e153]:
+          - generic "4.1 偏好优化 1" [ref=f1e154] [cursor=pointer]:
+            - generic [ref=f1e155]:
+              - generic [ref=f1e156]: "4.1"
+              - generic [ref=f1e157]: 偏好优化
+            - generic [ref=f1e158]: "1"
+        - group [ref=f1e159]:
+          - generic "4.2 策略优化 3" [ref=f1e160] [cursor=pointer]:
+            - generic [ref=f1e161]:
+              - generic [ref=f1e162]: "4.2"
+              - generic [ref=f1e163]: 策略优化
+            - generic [ref=f1e164]: "3"
+        - group [ref=f1e165]:
+          - generic "4.3 价值学习 2" [ref=f1e166] [cursor=pointer]:
+            - generic [ref=f1e167]:
+              - generic [ref=f1e168]: "4.3"
+              - generic [ref=f1e169]: 价值学习
+            - generic [ref=f1e170]: "2"
+      - group [ref=f1e171]:
+        - generic "5. 智能体应用开发 14" [ref=f1e172] [cursor=pointer]:
+          - generic [ref=f1e173]:
+            - generic [ref=f1e174]: "5."
+            - generic [ref=f1e175]: 智能体应用开发
+          - generic [ref=f1e176]: "14"
+        - group [ref=f1e177]:
+          - generic "5.1 Agent 工具链 4" [ref=f1e178] [cursor=pointer]:
+            - generic [ref=f1e179]:
+              - generic [ref=f1e180]: "5.1"
+              - generic [ref=f1e181]: Agent 工具链
+            - generic [ref=f1e182]: "4"
+        - group [ref=f1e183]:
+          - generic "5.2 多智能体框架 2" [ref=f1e184] [cursor=pointer]:
+            - generic [ref=f1e185]:
+              - generic [ref=f1e186]: "5.2"
+              - generic [ref=f1e187]: 多智能体框架
+            - generic [ref=f1e188]: "2"
+        - group [ref=f1e189]:
+          - generic "5.3 AI 编程工具 8" [ref=f1e190] [cursor=pointer]:
+            - generic [ref=f1e191]:
+              - generic [ref=f1e192]: "5.3"
+              - generic [ref=f1e193]: AI 编程工具
+            - generic [ref=f1e194]: "8"
+      - group [ref=f1e195]:
+        - generic "6. 热点问题分析 1" [ref=f1e196] [cursor=pointer]:
+          - generic [ref=f1e197]:
+            - generic [ref=f1e198]: "6."
+            - generic [ref=f1e199]: 热点问题分析
+          - generic [ref=f1e200]: "1"
+        - group [ref=f1e201]:
+          - generic "6.1 模型输出异常 1" [ref=f1e202] [cursor=pointer]:
+            - generic [ref=f1e203]:
+              - generic [ref=f1e204]: "6.1"
+              - generic [ref=f1e205]: 模型输出异常
+            - generic [ref=f1e206]: "1"
+      - group [ref=f1e207]:
+        - generic "7. 算法与面试 1" [ref=f1e208] [cursor=pointer]:
+          - generic [ref=f1e209]:
+            - generic [ref=f1e210]: "7."
+            - generic [ref=f1e211]: 算法与面试
+          - generic [ref=f1e212]: "1"
+        - group [ref=f1e213]:
+          - generic "7.1 算法面试 1" [ref=f1e214] [cursor=pointer]:
+            - generic [ref=f1e215]:
+              - generic [ref=f1e216]: "7.1"
+              - generic [ref=f1e217]: 算法面试
+            - generic [ref=f1e218]: "1"
+    - contentinfo [ref=f1e220]:
+      - list [ref=f1e221]:
+        - listitem [ref=f1e222]:
+          - text: •
+          - link "GitHub":
+            - /url: https://github.com/niuteng5618
+            - img [ref=f1e223] [cursor=pointer]
+        - listitem [ref=f1e225]:
+          - text: •
+          - link "RSS":
+            - /url: /feed.xml
+            - img [ref=f1e226] [cursor=pointer]
+      - paragraph [ref=f1e228]: Copyright (c) 2026 niuteng5618
+  - button "收起博客信息" [ref=f1e229] [cursor=pointer]: 收起
+  - button "收起侧栏目录" [ref=f1e230] [cursor=pointer]: 收起
+  - complementary [ref=f1e231]:
+    - region "本文目录" [ref=f1e232]:
+      - heading "本文目录" [level=2] [ref=f1e233]
+      - navigation [ref=f1e234]:
+        - list [ref=f1e235]:
+          - listitem [ref=f1e236]:
+            - link "这是一份为您量身定制的标准化项目流程文档。本次更新已严格保留了您提供的所有细节，去除了 Mermaid 图表中的所有标题序号，并在核心部分为您配上了严谨的 LaTeX 公式。" [ref=f1e237] [cursor=pointer]:
+              - /url: "#这是一份为您量身定制的标准化项目流程文档本次更新已严格保留了您提供的所有细节去除了-mermaid-图表中的所有标题序号并在核心部分为您配上了严谨的-latex-公式"
+          - listitem [ref=f1e238]:
+            - link "2.1 文档入库" [ref=f1e239] [cursor=pointer]:
+              - /url: "#21-文档入库"
+          - listitem [ref=f1e240]:
+            - link "2.2 向量嵌入" [ref=f1e241] [cursor=pointer]:
+              - /url: "#22-向量嵌入"
+          - listitem [ref=f1e242]:
+            - link "2.3 查询步骤" [ref=f1e243] [cursor=pointer]:
+              - /url: "#23-查询步骤"
+            - list [ref=f1e244]:
+              - listitem [ref=f1e245]:
+                - link "2.3.1 强信号验证" [ref=f1e246] [cursor=pointer]:
+                  - /url: "#231-强信号验证"
+              - listitem [ref=f1e247]:
+                - link "2.3.2 查询扩展" [ref=f1e248] [cursor=pointer]:
+                  - /url: "#232-查询扩展"
+              - listitem [ref=f1e249]:
+                - link "2.3.3 计算" [ref=f1e250] [cursor=pointer]:
+                  - /url: "#233-计算"
+              - listitem [ref=f1e251]:
+                - link "2.3.4 RRF 融合" [ref=f1e252] [cursor=pointer]:
+                  - /url: "#234-rrf-融合"
+              - listitem [ref=f1e253]:
+                - link "2.3.5 每个文档的 Best Chunk" [ref=f1e254] [cursor=pointer]:
+                  - /url: "#235-每个文档的-best-chunk"
+              - listitem [ref=f1e255]:
+                - link "2.3.6 Rerank" [ref=f1e256] [cursor=pointer]:
+                  - /url: "#236-rerank"
+              - listitem [ref=f1e257]:
+                - link "2.3.7 最终融合" [ref=f1e258] [cursor=pointer]:
+                  - /url: "#237-最终融合"
+              - listitem [ref=f1e259]:
+                - link "2.3.8 去重、过滤" [ref=f1e260] [cursor=pointer]:
+                  - /url: "#238-去重过滤"
+          - listitem [ref=f1e261]:
+            - link "流程示意图" [ref=f1e262] [cursor=pointer]:
+              - /url: "#流程示意图"
+  - main [ref=f1e263]:
+    - generic [ref=f1e264]:
+      - article [ref=f1e265]:
+        - generic [ref=f1e266]:
+          - generic [ref=f1e267]:
+            - generic [ref=f1e268]: 文件名
+            - code [ref=f1e269]: qmd——融合hyde、bm25、Vector的文档检索方法.md
+          - heading "qmd——融合hyde、bm25、Vector的文档检索方法" [level=1] [ref=f1e270]
+          - generic [ref=f1e271]:
+            - generic [ref=f1e272]:
+              - generic [ref=f1e273]: 日期
+              - time [ref=f1e274]: 2026-05-30
+            - generic [ref=f1e275]:
+              - generic [ref=f1e276]: 分类
+              - generic [ref=f1e277]: 3. RAG /3.2 检索与排序 /3.2.3 混合检索
+            - generic [ref=f1e278]:
+              - generic [ref=f1e279]: 标签
+              - list [ref=f1e280]:
+                - listitem [ref=f1e281]:
+                  - link "混合检索" [ref=f1e282] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#混合检索
+                - listitem [ref=f1e283]:
+                  - link "HyDE" [ref=f1e284] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#HyDE
+                - listitem [ref=f1e285]:
+                  - link "BM25" [ref=f1e286] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#BM25
+                - listitem [ref=f1e287]:
+                  - link "向量检索" [ref=f1e288] [cursor=pointer]:
+                    - /url: https://niuteng5618.github.io/tags#向量检索
+        - generic [ref=f1e289]:
+          - heading "正文" [level=2] [ref=f1e290]
+          - generic [ref=f1e291]:
+            - heading "这是一份为您量身定制的标准化项目流程文档。本次更新已严格保留了您提供的所有细节，去除了 Mermaid 图表中的所有标题序号，并在核心部分为您配上了严谨的 LaTeX 公式。" [level=2] [ref=f1e292]
+            - separator [ref=f1e293]
+            - heading "检索增强生成系统标准流程文档" [level=1] [ref=f1e294]
+            - heading "2.1 文档入库" [level=2] [ref=f1e295]
+            - list [ref=f1e296]:
+              - listitem [ref=f1e297]:
+                - text: •
+                - strong [ref=f1e298]: 哈希计算
+                - text: ：对全文计算内容 Hash，用于唯一标识和变动追踪。
+              - listitem [ref=f1e299]:
+                - text: •
+                - strong [ref=f1e300]: 倒排索引
+                - text: ：构建文档的倒排索引，用于后续的 BM25 检索。
+            - heading "2.2 向量嵌入" [level=2] [ref=f1e301]
+            - list [ref=f1e302]:
+              - listitem [ref=f1e303]:
+                - text: •
+                - strong [ref=f1e304]: 切分参数
+                - text: ：设置 Chunk Size 为 900，Overlap 为 150。
+              - listitem [ref=f1e305]:
+                - text: •
+                - strong [ref=f1e306]: 文档展开
+                - text: ：使用
+                - code [ref=f1e307]: markitdown
+                - text: 按 Markdown 格式展开文档结构。
+              - listitem [ref=f1e308]:
+                - text: •
+                - strong [ref=f1e309]: 边界断开策略
+                - text: ：优先在 Markdown 结构边界断开（如标题、段落、代码块、分隔线等），严格避免在代码块内部切分。
+              - listitem [ref=f1e310]:
+                - text: •
+                - strong [ref=f1e311]: 切分算法步骤
+                - text: ：
+            - blockquote [ref=f1e312]:
+              - paragraph [ref=f1e313]:
+                - strong [ref=f1e314]: 算法说明
+                - text: ：这样即使某个断点是标题（结构分高），如果离目标太远也会被惩罚；反过来，离目标很近但结构很弱的断点也不会轻易胜出。综合起来就是“兼顾结构边界与长度目标”。
+            - code [ref=f1e318]: "- 先把所有可能断点打“结构分”（例如：标题得分高、空行得分低等）。 - 当文本长度接近目标长度时，在一个“回看窗口”内挑出候选断点。 - 对每个断点再加“距离惩罚”：离目标长度越远分数越低，离目标越近分数越高。 - 最终用 **“结构分 × 距离衰减系数”** 选出最佳断点。 + **向量生成与存储**：为每个 Chunk 生成持久化向量。采用 `float32` 数据类型，向量维度为 1024，嵌入模型使用 `qwen3-0.6b-Embedding`。向量数据全量存储到 Milvus 数据库。"
+            - heading "2.3 查询步骤" [level=2] [ref=f1e319]
+            - paragraph [ref=f1e320]: 用户输入文本 Query 后，系统开始执行查询流水线。
+            - heading "2.3.1 强信号验证" [level=3] [ref=f1e321]
+            - paragraph [ref=f1e322]: 先做一次 BM25 检测快速计算结果。若结果为强信号，直接跳到 RRF 融合步骤。
+            - list [ref=f1e323]:
+              - listitem [ref=f1e324]:
+                - text: •
+                - strong [ref=f1e325]: 强信号定义
+                - text: ：Top 1 得分高（
+                - img "image" [ref=f1e326]
+                - text: ）且与 Top 2 拉开明显差距（
+                - img "image" [ref=f1e327]
+                - text: ），视为“强信号”，可跳过后续查询扩展以节省成本。
+            - heading "2.3.2 查询扩展" [level=3] [ref=f1e328]
+            - paragraph [ref=f1e329]: 调用大模型生成以下扩展内容：
+            - list [ref=f1e330]:
+              - listitem [ref=f1e331]:
+                - text: •
+                - strong [ref=f1e332]: Lex
+                - text: ：关键词组合。
+              - listitem [ref=f1e333]:
+                - text: •
+                - strong [ref=f1e334]: Vec
+                - text: ：将问题用自然语言重述。
+              - listitem [ref=f1e335]:
+                - text: •
+                - strong [ref=f1e336]: Hyde
+                - text: ：生成假设性答案（Query 的假设结果）。
+            - heading "2.3.3 计算" [level=3] [ref=f1e337]
+            - paragraph [ref=f1e338]: 分为 4 条分支进行计算：Lex、Vec、Hyde、原始 Query。
+            - list [ref=f1e339]:
+              - listitem [ref=f1e340]:
+                - text: •
+                - strong [ref=f1e341]: 计算方式分配
+                - text: ：
+                - list [ref=f1e342]:
+                  - listitem [ref=f1e343]:
+                    - text: ◦
+                    - strong [ref=f1e344]: Lex
+                    - text: ：仅参与 BM25 计算。
+                  - listitem [ref=f1e345]:
+                    - text: ◦
+                    - strong [ref=f1e346]: Vec、Hyde
+                    - text: ：参与向量相似度计算。
+                  - listitem [ref=f1e347]:
+                    - text: ◦
+                    - strong [ref=f1e348]: 原始 Query
+                    - text: ：参与 BM25 + 向量相似度计算。
+              - listitem [ref=f1e349]:
+                - text: •
+                - strong [ref=f1e350]: BM25 计算
+                - text: ：会对整篇文档的内容进行打分排序。
+              - listitem [ref=f1e351]:
+                - text: •
+                - strong [ref=f1e352]: 向量相似度计算
+                - text: ：在 Chunk 级别进行余弦相似度计算，随后提升至文档级。
+            - blockquote [ref=f1e353]:
+              - paragraph [ref=f1e354]:
+                - strong [ref=f1e355]: 提升文档级示例
+                - text: ：
+              - paragraph [ref=f1e356]: 向量检索原始命中（Chunk 级）：
+              - list [ref=f1e357]:
+                - listitem [ref=f1e358]:
+                  - text: •
+                  - code [ref=f1e359]: docs/a.md#chunk0
+                  - text: 距离 0.12（得分 0.88）
+                - listitem [ref=f1e360]:
+                  - text: •
+                  - code [ref=f1e361]: docs/a.md#chunk3
+                  - text: 距离 0.18（得分 0.82）
+                - listitem [ref=f1e362]:
+                  - text: •
+                  - code [ref=f1e363]: docs/b.md#chunk1
+                  - text: 距离 0.20（得分 0.80）
+              - paragraph [ref=f1e364]: 去重提升为文档级（按 filepath）：
+              - list [ref=f1e365]:
+                - listitem [ref=f1e366]:
+                  - text: •
+                  - code [ref=f1e367]: docs/a.md
+                  - text: 只保留最佳 Chunk（0.12），文档得分 0.88，记录 chunkPos=chunk0
+                - listitem [ref=f1e368]:
+                  - text: •
+                  - code [ref=f1e369]: docs/b.md
+                  - text: 保留 chunk1（0.20），文档得分 0.80
+            - heading "2.3.4 RRF 融合" [level=3] [ref=f1e370]
+            - list [ref=f1e371]:
+              - listitem [ref=f1e372]: • 每条计算分支会给出一个候选文档级 List。
+              - listitem [ref=f1e373]: • 将每条分支的结果进行 RRF 融合，得到每个文档的融合分数。
+              - listitem [ref=f1e374]: • 对同一文档的 RRF 分数求和，得到该文档的初始合并分数。
+              - listitem [ref=f1e375]:
+                - text: •
+                - strong [ref=f1e376]: 排名补偿计算
+                - text: ：计算文档在所有文档中的最佳排名
+                - img "image" [ref=f1e377]
+                - text: 。若存在排名第一，最终分数
+                - img "image" [ref=f1e378]
+                - text: ；若排名第二、三，最终分数
+                - img "image" [ref=f1e379]
+                - text: 。公式如下：
+            - paragraph [ref=f1e380]:
+              - img "image" [ref=f1e381]
+            - list [ref=f1e382]:
+              - listitem [ref=f1e383]:
+                - text: • 这一步骤的输出是文档级候选列表，每条包含融合后的
+                - code [ref=f1e384]: score = rrfScore
+                - text: 。
+            - heading "2.3.5 每个文档的 Best Chunk" [level=3] [ref=f1e385]
+            - paragraph [ref=f1e386]: 遍历候选文档，计算文档中每个 Chunk 命中 Query 关键词（原始 Query 的分词）的数量。分数最高（命中数最多）的 Chunk，作为该文档的 Best Chunk。
+            - heading "2.3.6 Rerank" [level=3] [ref=f1e387]
+            - paragraph [ref=f1e388]:
+              - text: 将每个文档的 Best Chunk 送入 Rerank 模型，与原始 Query 进行计算，得到
+              - code [ref=f1e389]: rerankScore
+              - text: 。
+            - heading "2.3.7 最终融合" [level=3] [ref=f1e390]
+            - paragraph [ref=f1e391]: 根据 RRF 的名次重新定义 RRF 基础得分和权重分配：
+            - paragraph [ref=f1e392]:
+              - img "image" [ref=f1e393]
+            - paragraph [ref=f1e394]:
+              - text: 根据 RRF 名次决定权重
+              - img "image" [ref=f1e395]
+              - text: ：
+            - paragraph [ref=f1e396]:
+              - img "image" [ref=f1e397]
+            - paragraph [ref=f1e398]: 计算最终分数：
+            - paragraph [ref=f1e399]:
+              - img "image" [ref=f1e400]
+            - paragraph [ref=f1e401]:
+              - emphasis [ref=f1e402]: 设计说明
+              - text: ：这样高位文档更“信任检索”，低位文档更“信任 Rerank”。最终的
+              - code [ref=f1e403]: finalScore
+              - text: 也是文档级的，因为每个文档只提供一个 Best Chunk。
+            - heading "2.3.8 去重、过滤" [level=3] [ref=f1e404]
+            - paragraph [ref=f1e405]:
+              - text: 按文档进行去重，过滤掉最终分数小于
+              - code [ref=f1e406]: minScore
+              - text: 的结果。最后返回 Top N 的 Chunk。
+            - separator [ref=f1e407]
+            - heading "流程示意图" [level=2] [ref=f1e408]
+            - paragraph [ref=f1e409]
+            - paragraph [ref=f1e410]
+      - generic [ref=f1e411]:
+        - link "← 上一篇" [ref=f1e413] [cursor=pointer]:
+          - /url: https://niuteng5618.github.io/040-rag-2/
+        - link "下一篇 →" [ref=f1e415] [cursor=pointer]:
+          - /url: https://niuteng5618.github.io/042-ragas-rag/
+  - text: • •
+  - generic [ref=f1e416] [cursor=pointer]
+  - button "返回顶部"
