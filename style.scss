@@ -2421,3 +2421,122 @@ body.dark-mode {
     border-color: rgba(173, 181, 189, 0.28);
   }
 }
+
+
+// 阅读布局：文章页左栏全局目录 + 右栏本文目录
+body.post-page {
+  // 左侧信息区改为纵向弹性布局，让目录占据剩余空间并独立滚动
+  .wrapper-sidebar {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    @include mobile {
+      display: block;
+      overflow: visible;
+    }
+  }
+
+  // 目录需要纵向空间，压缩头像与站点信息
+  .site-info {
+    margin-top: 40px;
+
+    .site-avatar {
+      max-width: 120px;
+      max-height: 120px;
+    }
+  }
+
+  .sidebar {
+    padding: 12px 0 0;
+  }
+
+  .navlist nav {
+    margin-top: 14px;
+    font-size: 16px;
+  }
+
+  .sidebar-directory {
+    flex: 1 1 auto;
+    min-height: 0;
+    margin-top: 16px;
+    padding: 0 14px 110px 30px;
+    border-top: 1px solid $divider-color;
+    overflow-y: auto;
+    text-align: left;
+    overscroll-behavior: contain;
+
+    // 底部留白给绝对定位的页脚，避免最后一项被盖住
+    @include mobile {
+      display: none;
+    }
+
+    .blog-directory-heading {
+      margin: 14px 0 6px;
+    }
+  }
+}
+
+// 右栏本文目录（复用 .blog-directory/.post-toc 的基础排版）
+.right-rail > .post-toc {
+  border-top: 0;
+  padding-top: 0;
+
+  h2 {
+    border-bottom: 0;
+
+    &:after {
+      content: "";
+      display: block;
+      width: 54px;
+      height: 3px;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, $link-color, rgba(34, 138, 230, 0.12));
+    }
+  }
+}
+
+.post-toc-body {
+  ul {
+    margin: 4px 0 6px 14px;
+  }
+
+  li {
+    margin: 6px 0;
+  }
+
+  a {
+    display: block;
+    color: $base-lighten-color;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: $link-color;
+  }
+
+  // 滚动跟随高亮当前章节
+  a.active {
+    color: $link-color;
+    font-weight: 700;
+  }
+}
+
+// 宽屏右栏已展示本文目录，隐藏正文顶部的目录卡片；窄屏保留卡片作为目录入口
+@media screen and (min-width: 1400px) {
+  body.post-page .post-toc-card {
+    display: none;
+  }
+}
+
+body.dark-mode {
+  .post-toc-body a {
+    color: var(--oc-gray-5);
+  }
+
+  .post-toc-body a:hover,
+  .post-toc-body a.active {
+    color: var(--oc-blue-6);
+  }
+}

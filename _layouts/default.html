@@ -1,13 +1,28 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  <body class="{% if page.layout == 'post' %}post-page{% endif %}">
     <div class="site-bg-decoration" aria-hidden="true"></div>
     {% include nav.html %}
 
-    <button class="rail-collapse-button" id="railCollapseButton" type="button" aria-label="收起博客目录">收起</button>
+    <button class="rail-collapse-button" id="railCollapseButton" type="button" aria-label="收起侧栏目录">收起</button>
     <aside class="right-rail" id="rightRail">
-      {% include blog-directory.html variant="rail" %}
+      {% comment %}文章页：右栏显示本文目录（无目录的文章回退到全局目录）；其他页面：全局目录{% endcomment %}
+      {% if page.layout == 'post' and page.toc %}
+        {% capture rail_toc %}{% include toc.html html=content h_min=2 h_max=3 %}{% endcapture %}
+        {% if rail_toc contains '<a ' %}
+          <section class="post-toc" aria-label="本文目录">
+            <h2 class="post-toc-title">本文目录</h2>
+            <nav class="post-toc-body" id="postTocNav">
+              {{ rail_toc }}
+            </nav>
+          </section>
+        {% else %}
+          {% include blog-directory.html variant="rail" %}
+        {% endif %}
+      {% else %}
+        {% include blog-directory.html variant="rail" %}
+      {% endif %}
     </aside>
 
     <div id="main" role="main" class="wrapper-content with-right-rail">

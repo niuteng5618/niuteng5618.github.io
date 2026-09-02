@@ -11,13 +11,13 @@
     var rightRail = document.getElementById('rightRail');
     var railCollapseButton = document.getElementById('railCollapseButton');
 
-    // 右侧目录的左右折叠：按钮独立于 rail，收起/展开过程可见且始终可点击
+    // 右侧栏的左右折叠：按钮独立于 rail，收起/展开过程可见且始终可点击
     if (rightRail && railCollapseButton) {
       railCollapseButton.addEventListener('click', function () {
         var collapsed = rightRail.classList.toggle('collapsed');
         document.body.classList.toggle('rail-collapsed', collapsed);
         railCollapseButton.textContent = collapsed ? '展开' : '收起';
-        railCollapseButton.setAttribute('aria-label', collapsed ? '展开博客目录' : '收起博客目录');
+        railCollapseButton.setAttribute('aria-label', collapsed ? '展开侧栏目录' : '收起侧栏目录');
       });
     }
 
@@ -45,11 +45,12 @@
       });
     }
 
-    // 进入文档后：右栏目录展开当前文章所在链路，其余只显示到二级，并滚动定位到当前文章
-    var activeItem = document.querySelector('.right-rail .blog-directory li.active');
-    if (activeItem && rightRail) {
+    // 进入文档后：展开当前文章所在的目录链路，并滚动定位到当前文章
+    // （文章页目录在左侧信息区，其他页面在右栏）
+    var activeItem = document.querySelector('.blog-directory li.active');
+    if (activeItem) {
       var node = activeItem.parentElement;
-      while (node && node !== rightRail) {
+      while (node && node !== document.body) {
         if (node.tagName === 'DETAILS') {
           node.open = true;
         }
@@ -57,11 +58,76 @@
       }
 
       window.requestAnimationFrame(function () {
-        var railRect = rightRail.getBoundingClientRect();
+        var container = activeItem.closest
+          ? (activeItem.closest('.sidebar-directory') || rightRail)
+          : rightRail;
+        if (!container) {
+          return;
+        }
+        var containerRect = container.getBoundingClientRect();
         var itemRect = activeItem.getBoundingClientRect();
-        var delta = (itemRect.top - railRect.top) - (rightRail.clientHeight - itemRect.height) / 2;
-        rightRail.scrollTop += delta;
+        var delta = (itemRect.top - containerRect.top) - (container.clientHeight - itemRect.height) / 2;
+        container.scrollTop += delta;
       });
+    }
+
+    // 右栏本文目录：滚动跟随高亮当前章节，并保持高亮项在栏内可见
+    var postTocNav = document.getElementById('postTocNav');
+    if (postTocNav) {
+      var tocLinks = Array.prototype.slice.call(postTocNav.querySelectorAll('a[href^="#"]'));
+      var tocTargets = tocLinks.map(function (link) {
+        var raw = (link.getAttribute('href') || '').slice(1);
+        var target = raw ? document.getElementById(raw) : null;
+        if (!target && raw) {
+          try {
+            target = document.getElementById(decodeURIComponent(raw));
+          } catch (e) {
+            target = null;
+          }
+        }
+        return target;
+      });
+
+      var activeTocLink = null;
+      var highlightTocLink = function (link) {
+        if (link === activeTocLink) {
+          return;
+        }
+        if (activeTocLink) {
+          activeTocLink.classList.remove('active');
+        }
+        activeTocLink = link;
+        if (!link || !rightRail) {
+          return;
+        }
+        link.classList.add('active');
+
+        var railRect = rightRail.getBoundingClientRect();
+        var linkRect = link.getBoundingClientRect();
+        var linkTop = linkRect.top - railRect.top;
+        if (linkTop < 40 || linkTop > rightRail.clientHeight - 40) {
+          rightRail.scrollTop += (linkTop + linkRect.height / 2) - rightRail.clientHeight / 2;
+        }
+      };
+
+      var updateTocSpy = function () {
+        var current = null;
+        for (var i = 0; i < tocTargets.length; i++) {
+          if (tocTargets[i] && tocTargets[i].getBoundingClientRect().top <= 100) {
+            current = tocLinks[i];
+          }
+        }
+        // 滚动到页面底部时，高亮最后一项
+        if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) {
+          current = tocLinks.length ? tocLinks[tocLinks.length - 1] : null;
+        }
+        highlightTocLink(current);
+      };
+
+      window.addEventListener('scroll', function () {
+        window.requestAnimationFrame(updateTocSpy);
+      }, { passive: true });
+      updateTocSpy();
     }
 
     var backToTop = document.getElementById('backToTop');
@@ -139,8 +205,8 @@
       });
     }
 
-    // 本文目录卡片：点击标题平滑跳转到对应正文，并让目标标题闪一下
-    var tocCardLinks = document.querySelectorAll('.post-toc-card a');
+    // 本文目录（正文卡片 + 右栏）：点击标题平滑跳转到对应正文，并让目标标题闪一下
+    var tocCardLinks = document.querySelectorAll('.post-toc-card a, #postTocNav a');
     if (tocCardLinks.length) {
       var flashTimer = null;
       var flashHeading = function (el) {

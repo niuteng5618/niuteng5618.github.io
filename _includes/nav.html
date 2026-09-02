@@ -21,6 +21,13 @@
     </nav>
   </div>
 
+  {% comment %}文章页：左栏导航下方追加全局目录，右侧栏让位给本文目录{% endcomment %}
+  {% if page.layout == 'post' %}
+  <div class="sidebar-directory" id="sidebarDirectory">
+    {% include blog-directory.html variant="sidebar" %}
+  </div>
+  {% endif %}
+
   <div class="wrapper-footer-desktop">
     <footer class="footer">
       {% include footer.html %}
