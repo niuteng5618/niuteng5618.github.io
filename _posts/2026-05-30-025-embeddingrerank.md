@@ -22,6 +22,8 @@ tags:
   - 召回
   - 重排序
 toc: true
+word_count: 2275
+reading_time: 6
 comments: false
 author: niuteng5618
 ---

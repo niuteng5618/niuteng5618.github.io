@@ -22,6 +22,8 @@ tags:
   - CLAUDE.md
   - Auto Memory
 toc: true
+word_count: 1480
+reading_time: 4
 comments: false
 author: niuteng5618
 ---

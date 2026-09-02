@@ -45,6 +45,34 @@
       });
     }
 
+    // 专注模式（文章页）：一键折叠左右两栏 + 切换护眼底色。
+    // 只改 body class，不写 localStorage，不覆盖用户手动保存的折叠偏好。
+    var focusModeButton = document.getElementById('focusModeButton');
+    if (focusModeButton) {
+      var syncCollapseButtons = function (collapsed) {
+        if (railCollapseButton) {
+          railCollapseButton.textContent = collapsed ? '展开' : '收起';
+          railCollapseButton.setAttribute('aria-label', collapsed ? '展开侧栏目录' : '收起侧栏目录');
+        }
+        if (sidebarCollapseButton) {
+          sidebarCollapseButton.textContent = collapsed ? '展开' : '收起';
+          sidebarCollapseButton.setAttribute('aria-label', collapsed ? '展开博客信息' : '收起博客信息');
+        }
+      };
+
+      focusModeButton.addEventListener('click', function () {
+        var active = document.body.classList.toggle('focus-mode');
+        document.body.classList.toggle('rail-collapsed', active);
+        document.body.classList.toggle('sidebar-collapsed', active);
+        if (rightRail) {
+          rightRail.classList.toggle('collapsed', active);
+        }
+        syncCollapseButtons(active);
+        focusModeButton.textContent = active ? '退出专注模式' : '专注模式';
+        focusModeButton.setAttribute('aria-label', active ? '退出专注模式' : '进入专注模式');
+      });
+    }
+
     // 进入文档后：展开当前文章所在的目录链路，并滚动定位到当前文章
     // （文章页目录在左侧信息区，其他页面在右栏）
     var activeItem = document.querySelector('.blog-directory li.active');

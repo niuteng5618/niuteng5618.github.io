@@ -22,6 +22,8 @@ tags:
   - 熔断器
   - 上下文压缩
 toc: true
+word_count: 1867
+reading_time: 5
 comments: false
 author: niuteng5618
 ---

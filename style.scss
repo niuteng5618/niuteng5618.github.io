@@ -2638,3 +2638,69 @@ body.dark-mode {
     background: var(--oc-blue-6);
   }
 }
+
+// 专注模式（文章页右上角）：一键折叠左右栏 + 米色护眼底色
+.focus-mode-button {
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 7;
+  padding: 7px 14px;
+  border: 1px solid rgba(73, 80, 87, 0.28);
+  border-radius: 999px;
+  color: $link-color;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 4px 14px rgba(33, 37, 41, 0.10);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  transition: right 0.26s ease, background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    color: white;
+    background: $link-color;
+    border-color: $link-color;
+  }
+}
+
+// 右栏展开时按钮让位到栏左侧，与 back-to-top 同一套跟随规则
+@media screen and (min-width: 1400px) {
+  .focus-mode-button {
+    right: 352px;
+  }
+
+  body.rail-collapsed .focus-mode-button {
+    right: 16px;
+  }
+}
+
+body.dark-mode .focus-mode-button {
+  color: var(--oc-blue-6);
+  background: rgba(33, 37, 41, 0.92);
+  border-color: rgba(173, 181, 189, 0.28);
+}
+
+body.dark-mode .focus-mode-button:hover {
+  color: #212529;
+  background: var(--oc-blue-6);
+}
+
+// 护眼底色：米色（暗色模式下为暖深灰），隐藏装饰性背景
+body.focus-mode {
+  background-color: #f6f0e1;
+  background-image: none;
+
+  .site-bg-decoration {
+    opacity: 0;
+  }
+}
+
+body.dark-mode.focus-mode {
+  background-color: #2a2620;
+}
+
+.site-bg-decoration {
+  transition: opacity 0.3s ease;
+}

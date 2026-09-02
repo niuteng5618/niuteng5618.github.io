@@ -22,6 +22,8 @@ tags:
   - RRF
   - Rerank
 toc: true
+word_count: 7757
+reading_time: 20
 comments: false
 author: niuteng5618
 ---

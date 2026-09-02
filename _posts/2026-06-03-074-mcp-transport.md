@@ -22,6 +22,8 @@ tags:
   - stdio
   - JSON-RPC
 toc: true
+word_count: 1932
+reading_time: 5
 comments: false
 author: niuteng5618
 ---

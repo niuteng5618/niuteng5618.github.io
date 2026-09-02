@@ -57,6 +57,8 @@ tags:
   - 标签1
   - 标签2
 toc: true
+word_count: 1234
+reading_time: 4
 comments: false
 author: niuteng5618
 ---
@@ -81,6 +83,8 @@ author: niuteng5618
 | `categories` | ✅ | 分类列表（包含三级分类） |
 | `tags` | ✅ | 标签列表（2-5个） |
 | `toc` | ✅ | 是否显示目录（`true`/`false`） |
+| `word_count` | ✅ | 正文字数（中文按字符、英文按单词计，剔除代码），由 `_scripts/update_reading_stats.py` 生成 |
+| `reading_time` | ✅ | 预计阅读分钟数（`ceil(word_count / 400)`），由同一脚本生成 |
 | `comments` | ✅ | 是否开启评论（当前统一 `false`） |
 | `author` | ✅ | 作者名（固定 `niuteng5618`） |
 

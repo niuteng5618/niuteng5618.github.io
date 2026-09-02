@@ -22,6 +22,8 @@ tags:
   - GGUF
   - 部署
 toc: true
+word_count: 2068
+reading_time: 6
 comments: false
 author: niuteng5618
 ---

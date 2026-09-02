@@ -17,6 +17,13 @@ layout: default
         <time class="date">{{ page.date | date: "%Y-%m-%d" }}</time>
       </div>
 
+      {% if page.word_count %}
+      <div class="post-meta-row post-stats">
+        <span class="meta-label">字数</span>
+        <span>{{ page.word_count }} 字 · 约 {{ page.reading_time | default: 1 }} 分钟</span>
+      </div>
+      {% endif %}
+
       {% if page.primary_category or page.secondary_category or page.series %}
       <div class="post-meta-row post-categories">
         <span class="meta-label">分类</span>

@@ -148,6 +148,8 @@ tags:
   - tag1
   - tag2                                  # 2–5 个，优先复用已有 tag
 toc: true
+word_count: 0                             # 由 _scripts/update_reading_stats.py 自动回填
+reading_time: 1                           # 同上，无需手算
 comments: false
 author: niuteng5618
 ---
@@ -166,6 +168,17 @@ author: niuteng5618
 - 删 `<font ...>` `</font>` `<span ...>` `</span>` `<u>` `</u>` —— 只保留内部文本。
 - 删所有 `style="..."` 属性。
 - `<br/>`、`<sub>` 等排版/公式标签可保留。
+
+### 4.4 回填字数 / 阅读时间（强制）
+
+正文清洗完成后运行（幂等，可重复执行）：
+
+```bash
+python3 _scripts/update_reading_stats.py          # 全部文章
+python3 _scripts/update_reading_stats.py _posts/2026-MM-DD-NNN-slug.md   # 只跑新文章
+```
+
+脚本会剔除代码块后统计中文字符 + 英文单词，写入 `word_count` / `reading_time`（`ceil(字数/400)` 分钟）。手工填的占位值会被覆盖。
 
 ------
 
@@ -311,6 +324,7 @@ fatal: unable to access 'https://github.com/...': Failed to connect to github.co
 - [ ] `display_filename` == `_pre_docs/` 下源文件名（包含中文/空格）
 - [ ] `tags` 2–5 个，技术性 tag，优先复用
 - [ ] `grep -RInE "<font|</font>|style=|<span|</span>|<u>|</u>" _posts` 无输出
+- [ ] 已运行 `python3 _scripts/update_reading_stats.py`，新文章 front matter 里 `word_count` / `reading_time` 有真实值
 - [ ] 无平台宣传内容（语雀 / CSDN / 平台迁移说明）
 - [ ] commit 信息描述清晰，符合历史 commit 风格
 - [ ] 推送命令里 PAT 没有写进任何会被 commit 的文件

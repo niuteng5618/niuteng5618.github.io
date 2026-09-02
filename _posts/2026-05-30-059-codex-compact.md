@@ -22,6 +22,8 @@ tags:
   - Compact
   - 开发工具
 toc: true
+word_count: 825
+reading_time: 3
 comments: false
 author: niuteng5618
 ---

@@ -22,6 +22,8 @@ tags:
   - 中文分词
   - Agentic RAG
 toc: true
+word_count: 1209
+reading_time: 4
 comments: false
 author: niuteng5618
 ---

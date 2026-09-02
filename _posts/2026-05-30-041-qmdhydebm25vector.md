@@ -21,6 +21,8 @@ tags:
   - BM25
   - 向量检索
 toc: true
+word_count: 989
+reading_time: 3
 comments: false
 author: niuteng5618
 ---
