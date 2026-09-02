@@ -2514,19 +2514,18 @@ body.sidebar-collapsed {
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.18em;
+  text-align: left;
 }
 
 .post-toc-body {
   font-size: 14px;
   line-height: 1.5em;
+  // 覆盖全局 nav a 的右对齐（那是左侧导航栏的样式）
+  text-align: left;
 
   ul {
     margin: 6px 0 8px;
     padding: 0;
-  }
-
-  ul ul {
-    margin: 2px 0 2px 14px;
   }
 
   li {
@@ -2540,9 +2539,11 @@ body.sidebar-collapsed {
 
   a {
     display: block;
-    padding: 4px 10px;
+    margin: 0;
+    padding: 4px 8px;
     border-radius: 8px;
     color: $base-color;
+    text-align: left;
     transition: color 0.2s ease, background-color 0.2s ease;
   }
 
@@ -2556,6 +2557,28 @@ body.sidebar-collapsed {
     color: $link-color;
     font-weight: 700;
     background: rgba(34, 138, 230, 0.10);
+  }
+
+  // 层级区分：顶级章节加重、组间距更大
+  > ul > li {
+    margin: 8px 0 3px;
+  }
+
+  > ul > li > a {
+    font-weight: 600;
+  }
+
+  // 子级标题：引导线缩进 + 更小更轻的字号
+  ul ul {
+    margin: 2px 0 2px 4px;
+    padding-left: 10px;
+    border-left: 1px solid rgba(73, 80, 87, 0.16);
+  }
+
+  ul ul a {
+    font-size: 13px;
+    font-weight: 400;
+    color: $base-lighten-color;
   }
 }
 
@@ -2580,6 +2603,14 @@ body.dark-mode {
 
   .post-toc-body a {
     color: var(--oc-gray-4);
+  }
+
+  .post-toc-body ul ul {
+    border-left-color: rgba(173, 181, 189, 0.20);
+  }
+
+  .post-toc-body ul ul a {
+    color: var(--oc-gray-5);
   }
 
   .post-toc-body a:hover {
